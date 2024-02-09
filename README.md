@@ -10,9 +10,8 @@ The tool is very simple to use and consists of the following steps.
 
      The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day that will assign the day of consumption to one of 21 clusters. This model will be available for free.
 
-     <img width="957" alt="Captura de pantalla 2024-02-09 a las 17 00 30" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ed5681a4-b6d5-4eeb-be34-73264cbb15e4">
+    <img width="993" alt="Captura de pantalla 2024-02-09 a las 17 04 01" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/f934b67f-1f97-4425-851c-eb2009a700d5">
 
-     
   3. **Time Series Imaging** 
 
       In this phase, each row (the 24x7) first columns will be converted into an image using the technique...
