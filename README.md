@@ -12,7 +12,7 @@ The tool is very simple to use and consists of the following steps.
 
 <img width="993" alt="Captura de pantalla 2024-02-09 a las 17 04 01" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a6a96b4c-3cb8-401a-b068-80e1ed09d749">
 
-> **_NOTE:_** This script does not prepare the dataset as described, but the clustering model of the day's hourly consumption with the 21 centroids shown below is offered for free in this repository, in case you need to use it to generate the next day's cluster column. You can use any model of your own.
+> **_NOTE:_** This script does not prepare the data as described, but the model for grouping days of hourly consumption into 21 centroids shown below is freely available in this repository, in case you are interested in completing the next day grouping column, using this model.
 
 ### Clustering model
 
