@@ -22,8 +22,9 @@ The tool is very simple to use and consists of the following steps.
 
     Each time series can be represented by a curve as can be seen in the following example of a user's weekly consumption.
 
-    <img width="594" alt="Captura de pantalla 2024-02-09 a las 18 01 56" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a46c129a-f4f1-4022-93f4-c3005cc261d6">
+<img width="617" alt="Captura de pantalla 2024-02-09 a las 18 02 48" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/dcbc8e1c-9661-42bb-8cab-bced69d59784">
 
+    
 
  4. **Deep Learning with Time Series Imaging** 
 
