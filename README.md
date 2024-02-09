@@ -5,7 +5,11 @@
 
 This script implements a methodology that combines ***deep learning***, ***image and time series processing*** to ***predict hourly electricity consumption for the next day***.
 
-The tool is very simple to use and consists of the following steps.
+The proposed methodology consists of 3 phases:
+
+- Data preparation
+- Conversion of time series to 2D images
+- Training of machine learning models
 
   ## Data preparation
   
