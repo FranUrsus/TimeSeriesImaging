@@ -14,7 +14,7 @@ The tool is very simple to use and consists of the following steps.
 
 ### Clustering model
 
-[fig--k21cent-Ireland.pdf](https://github.com/FranUrsus/TimeSeriesImaging/files/14223930/fig--k21cent-Ireland.pdf)
+![fig--k21cent-Ireland](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9cb4ceef-1f5d-44c6-90a5-0ab72116627e)
 
    
   3. **Time Series Imaging** 
