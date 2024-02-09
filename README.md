@@ -12,6 +12,8 @@ The tool is very simple to use and consists of the following steps.
 
 <img width="993" alt="Captura de pantalla 2024-02-09 a las 17 04 01" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a6a96b4c-3cb8-401a-b068-80e1ed09d749">
 
+> **_NOTE:_** The script does not prepare the dataset, but the clustering model of the day's hourly consumption with the 21 centroids shown below is offered for free in this repository, in case you need to use it to generate the next day's cluster column. You can use any model of your own.
+
 ### Clustering model
 
 ![fig--k21cent-Ireland](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9cb4ceef-1f5d-44c6-90a5-0ab72116627e)
