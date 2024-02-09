@@ -9,8 +9,8 @@ The proposed methodology consists of 3 phases:
 
 - Data preparation
 - Conversion of time series to 2D images
-- Training of machine learning models
-
+- Training of Deep learning models
+  
   ## Data preparation
   
   The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day that will assign the day of consumption to one of 21 clusters. This model will be available for free.
