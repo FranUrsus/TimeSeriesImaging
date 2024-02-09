@@ -18,9 +18,9 @@ The tool is very simple to use and consists of the following steps.
 ![fig--k21cent-Ireland](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9cb4ceef-1f5d-44c6-90a5-0ab72116627e)
 
    
-## Time series imaging** 
+## Time series imaging
 
-    Each time series can be represented by a curve as can be seen in the following example of a user's weekly consumption.
+Each time series can be represented by a curve as can be seen in the following example of a user's weekly consumption.
 
 <img width="617" alt="Captura de pantalla 2024-02-09 a las 18 02 48" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/dcbc8e1c-9661-42bb-8cab-bced69d59784">
 
