@@ -30,7 +30,7 @@ Each time series can be represented by a curve as can be seen in the following e
 
     
 
- 4. **Deep Learning with Time Series Imaging** 
+ ## Deep Learning with Time Series Imaging
 
 
 
