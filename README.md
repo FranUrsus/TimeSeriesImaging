@@ -1,4 +1,4 @@
- # Prediction of electrical energy consumption based on Time Series Imaging
+ # Hourly electricity consumption forecasts for the following day based on Time Series Imaging
 
 ![NNTS](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1d9f9a2c-376e-4165-8ae3-6cd2f791bb5a)
 
