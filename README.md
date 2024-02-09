@@ -1,5 +1,7 @@
  # Prediction of electrical energy consumption based on Time Series Imaging
 
+![NNTS](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1d9f9a2c-376e-4165-8ae3-6cd2f791bb5a)
+
 
 This script implements a methodology that combines ***deep learning***, ***image and time series processing*** to ***predict hourly electricity consumption for the next day***.
 
