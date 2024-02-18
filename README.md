@@ -43,7 +43,12 @@ To make predictions using this model, the weekly time series to be predicted wil
  
  ## Deep Learning with Time Series Imaging
 
+Neural network technologies for image Generation models:
 
+- Variation Autoencoders (VAEs)
+- Generative Adversarial Models (GANs)
+- Auto Regression Models
+- Diffusion Models
 
 
 ## Authors ✒️
