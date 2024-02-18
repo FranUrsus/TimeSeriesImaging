@@ -27,7 +27,8 @@ The centroids of the model that has been used to assign the next day's cluster t
 
 ## Time series imaging
 
-Each time series can be represented by a curve as can be seen in the following examples:
+<img width="1466" alt="Captura de pantalla 2024-02-18 a las 21 20 19" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a71cbbc6-f5db-490d-b9d5-46d5207fca65">
+
 
 ### Week consumption
 
@@ -41,11 +42,21 @@ Each time series can be represented by a curve as can be seen in the following e
 
 ### Modelling time series images for deep learning model training
 
-To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific domain.
- The proposed methodology will model each weekly consumption time series as an image in this specific domain. The same process will be carried out for the 21 centroids representing the next day's consumption. The models will be trained by providing as inputs the weekly images, and as outputs the images of the next day's consumption, both in this specific format.
+To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific  domain.
+ The proposed methodology will model each weekly consumption time series as an image in this specific domain. The same process will be carried out for the 21 centroids representing the next day's consumption. 
+ 
+ Deep leaning models will be trained by providing as inputs the weekly images, and as outputs the images of the consumption cluster for next day, both in this specific format.
+ 
 To make predictions using this model, the weekly time series to be predicted will be converted to this specific domain, and the output generated will be a daily image in this specific domain. Finally, the time series will be obtained by applying the inverse process to the transform and will be represented as a curve.
 
- 
+**Example of week consumption time serie in Gramian Field Domain** (The inputs of neural networks)
+
+<img width="885" alt="Captura de pantalla 2024-02-18 a las 21 21 28" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/8ca37a10-c6f0-45ac-8fc7-d1ac891182b2">
+
+**Example of cluster consumption time serie in Gramian Field Domain** (The output of neural networks)
+
+<img width="888" alt="Captura de pantalla 2024-02-18 a las 21 25 58" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ef406805-a8d1-4254-bc4b-82f1441c5d39">
+
  ## Deep Learning with Time Series Imaging
 
 Neural network technologies for image Generation models:
