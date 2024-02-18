@@ -32,8 +32,8 @@ Each time series can be represented by a curve as can be seen in the following e
 
 > In order to train machine learning models, each weekly consumption time series will be modelled as a 2D image, as will each of the 21 clusters in the model (one of these images will be the image representing the next day's consumption cluster). All this information will be needed for the supervised machine learning process carried out by the deep learning algorithms.
 
-    
-
+<img width="691" alt="Captura de pantalla 2024-02-18 a las 10 55 00" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d7b74d41-71fe-4963-98a4-12a7cb880d87">
+ 
  ## Deep Learning with Time Series Imaging
 
 
