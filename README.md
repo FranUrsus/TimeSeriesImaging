@@ -21,7 +21,7 @@ The proposed methodology consists of 3 phases:
 
 ## Clustering model
 
-The centroids modelling the next day's consumption for each of the consumption weeks are shown below.
+The centroids of the model that has been used to assign the next day's cluster to each weekly consumption are as follows:
 
 <img width="727" alt="centroids" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d6e7827a-af06-4bf9-9f90-20e59d5a4962">
 
