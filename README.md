@@ -21,8 +21,7 @@ The proposed methodology consists of 3 phases:
 
 ### Clustering model
 
-![fig--k21cent-Ireland](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9cb4ceef-1f5d-44c6-90a5-0ab72116627e)
-
+<img width="727" alt="Captura de pantalla 2024-02-18 a las 13 45 06" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/3b8f3f4c-9c95-4c73-b9ef-ea6527e0b407">
    
 ## Time series imaging
 
