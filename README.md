@@ -34,6 +34,13 @@ Each time series can be represented by a curve as can be seen in the following e
 
 <img width="691" alt="Captura de pantalla 2024-02-18 a las 10 55 00" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d7b74d41-71fe-4963-98a4-12a7cb880d87">
  
+### Modelling time series images for deep learning model training
+
+To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific domain.
+ The proposed methodology will model each weekly consumption time series as an image in this specific domain. The same process will be carried out for the 21 centroids representing the next day's consumption. The models will be trained by providing as inputs the weekly images, and as outputs the images of the next day's consumption, both in this specific format.
+To make predictions using this model, the weekly time series to be predicted will be converted to this specific domain, and the output generated will be a daily image in this specific domain. Finally, the time series will be obtained by applying the inverse process to the transform and will be represented as a curve.
+
+ 
  ## Deep Learning with Time Series Imaging
 
 
