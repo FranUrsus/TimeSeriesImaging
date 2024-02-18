@@ -37,7 +37,7 @@ Each time series can be represented by a curve as can be seen in the following e
 
 ### Consumption centroid
 
-<img width="426" alt="Captura de pantalla 2024-02-18 a las 13 59 06" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/431716e2-a997-4d96-a6b5-228c83a7979e">
+<img width="657" alt="Captura de pantalla 2024-02-18 a las 14 02 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/88ecd86f-e984-4e7c-9d83-a5e93b323d59">
 
 ### Modelling time series images for deep learning model training
 
