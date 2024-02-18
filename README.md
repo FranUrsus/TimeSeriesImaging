@@ -27,11 +27,15 @@ The centroids of the model that has been used to assign the next day's cluster t
 
 ## Time series imaging
 
-Each time series can be represented by a curve as can be seen in the following example of a user's weekly consumption.
+Each time series can be represented by a curve as can be seen in the following examples:
+
+### Week consumption
 
 <img width="1466" alt="Captura de pantalla 2024-02-18 a las 10 52 35" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d95f3253-9b4c-4f2d-8ec8-6b46ef72e7e3">
 
 > In order to train machine learning models, each weekly consumption time series will be modelled as a 2D image, as will each of the 21 clusters in the model (one of these images will be the image representing the next day's consumption cluster). All this information will be needed for the supervised machine learning process carried out by the deep learning algorithms.
+
+### Consumption centroid
 
 <img width="691" alt="Captura de pantalla 2024-02-18 a las 10 55 00" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d7b74d41-71fe-4963-98a4-12a7cb880d87">
  
