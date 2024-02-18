@@ -37,8 +37,8 @@ Each time series can be represented by a curve as can be seen in the following e
 
 ### Consumption centroid
 
-<img width="691" alt="Captura de pantalla 2024-02-18 a las 10 55 00" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d7b74d41-71fe-4963-98a4-12a7cb880d87">
- 
+<img width="426" alt="Captura de pantalla 2024-02-18 a las 13 59 06" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/431716e2-a997-4d96-a6b5-228c83a7979e">
+
 ### Modelling time series images for deep learning model training
 
 To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific domain.
