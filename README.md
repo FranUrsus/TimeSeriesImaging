@@ -10,8 +10,8 @@ The proposed methodology consists of 3 phases:
 - Data preparation
 - Conversion of time series to 2D images
 - Training of Deep learning models
-  
-  ## Data preparation
+
+## Data preparation
   
   The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day that will assign the day of consumption to one of 21 clusters. This model will be available for free.
 
@@ -19,7 +19,7 @@ The proposed methodology consists of 3 phases:
 
 > **_NOTE:_** This script does not prepare the data as described, but the model for grouping days of hourly consumption into 21 centroids shown below is freely available in this repository, in case you are interested in completing the next day grouping column, using this model.
 
-### Clustering model
+## Clustering model
 
 The centroids modelling the next day's consumption for each of the consumption weeks are shown below.
 
