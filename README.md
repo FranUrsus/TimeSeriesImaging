@@ -1,4 +1,4 @@
- #  Deep Learning and time series for the next day electricity consumption forecasts
+ #  Deep learning and time series imaging for the next day electricity consumption forecasts
 
 ![NNTS](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1d9f9a2c-376e-4165-8ae3-6cd2f791bb5a)
 
