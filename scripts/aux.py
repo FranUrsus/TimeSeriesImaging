@@ -2,49 +2,48 @@ import importlib
 import matplotlib.pyplot as plt
 import random
 
+
 # return if a library is installed
-def checkLibraryInstalled(libraryName):
-    print(libraryName)
+def check_library_installed(library_name):
+    print(library_name)
     installed = True
     try:
-        importlib.import_module (libraryName)
-        print(libraryName + " already installed")
+        importlib.import_module(library_name)
+        print(library_name + " already installed")
     except ImportError as e:
         print("Error -> ", e)
         installed = False
     return installed
+
 
 # return a generated random color
 def random_color_generator():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
-    return (r, g, b)
- 
+    return r, g, b
 
-#plot a time serie with week separator
-def plotTimeSeriesWithWeekSeparator (timeSerie):
-    plt.figure(figsize=(20,10))
-    timeSerie.plot(marker='o', markersize=3)
+
+# plot a time_series with week separator
+def plot_time_series_with_week_separator(time_series):
+    plt.figure(figsize=(20, 10))
+    time_series.plot(marker='o', markersize=3)
     plt.xlabel('Hour', fontsize=15)
     plt.ylabel('Consumption (Wh)', fontsize=15)
-    weekSeparatorVerticalLineCoords =  [*range(23, 169, 24)] 
+    week_separator_vertical_line_coords = [*range(23, 169, 24)]
     i = 0
-    colors = ['blue','green','red','cyan','pink','yellow','orange']
-    for weekCoords in weekSeparatorVerticalLineCoords:
-        plt.vlines(x=weekCoords,colors=colors[i], ls='--', lw=2, label='day '+str(i+1), ymin = 0, ymax = max (timeSerie) )
-        i+=1
+    colors = ['blue', 'green', 'red', 'cyan', 'pink', 'yellow', 'orange']
+    for weekCoords in week_separator_vertical_line_coords:
+        plt.vlines(x=weekCoords, colors=colors[i], ls='--', lw=2, label='day ' + str(i + 1), ymin=0,
+                   ymax=max(time_series))
+        i += 1
     plt.legend(bbox_to_anchor=(1.0, 1), loc='upper left', title="Day of the week")
     plt.show()
 
-#plot a time serie
-def plotTimeSeries (timeSerie):
-    timeSerie.plot()
+
+# plot a time_series
+def plot_time_series(time_series):
+    time_series.plot()
     plt.xlabel('Hour', fontsize=15)
     plt.ylabel('Consumption (Wh)', fontsize=15)
     plt.show()
-
-            
-        
-
-    
