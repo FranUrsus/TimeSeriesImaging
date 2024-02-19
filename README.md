@@ -8,7 +8,7 @@ This script implements a methodology that combines ***deep learning***, ***image
 The proposed methodology consists of 3 phases:
 
 - Data preparation
-- Conversion of time series to 2D images
+- Time series imaging
 - Training of Deep learning models
 
 ## Data preparation
@@ -27,8 +27,7 @@ The centroids of the model that has been used to assign the next day's cluster t
 
 ## Time series imaging
 
-<img width="1466" alt="Captura de pantalla 2024-02-18 a las 21 20 19" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a71cbbc6-f5db-490d-b9d5-46d5207fca65">
-
+Time series can be represented as 2D curves representing the value for each instant in the time series, but this way of modelling time series is not the most suitable for training models with deep learning algorithms to make predictions from time series images.
 
 ### Week consumption
 
