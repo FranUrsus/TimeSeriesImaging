@@ -55,7 +55,7 @@ To make predictions using this model, the weekly time series to be predicted wil
 
 **Example of cluster consumption time serie in Gramian Field Domain** (The output of neural networks)
 
-<img width="888" alt="Captura de pantalla 2024-02-18 a las 21 25 58" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ef406805-a8d1-4254-bc4b-82f1441c5d39">
+![clus_0_gram](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/2c8a1496-72fd-49b4-9d92-55c9c322b51b)
 
  ## Deep Learning with Time Series Imaging
 
