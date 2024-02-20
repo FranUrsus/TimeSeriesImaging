@@ -37,7 +37,7 @@ This model is available for free in model folder.
 
 ## Time series imaging
 
-Time series can be represented as 2D curves representing the value for each instant in the time series, but this way of modelling time series is not the most suitable for training models with deep learning algorithms to make predictions from time series images.
+Time series can be modeled as 2D curves representing the value for each instant in the time series, but this way of modelling time series is not the most suitable for training models with deep learning algorithms to make predictions from time series images.
 
 ### Week consumption
 
