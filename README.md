@@ -69,7 +69,7 @@ To make predictions using this model, the weekly time series to be predicted wou
 
 The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
 
-In this output example, the week consumption image with feed the deep learning model, 
+In this output example, the week consumption image with feed the deep learning model activates the first output neurons (cluster 0 next day consumption will be predicted)
 
 [1,0,0,0,0,0,0,0,0,...0]
 
