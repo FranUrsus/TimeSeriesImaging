@@ -1,5 +1,11 @@
  #  Deep learning and time series imaging for the next day electricity consumption forecasts
 
+
+**Alternative 1**
+<img width="1079" alt="Captura de pantalla 2024-02-20 a las 18 46 37" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/495d8749-a0a7-4c2d-a422-482ee77c23a7">
+
+
+**Alternative 2**
 <img width="956" alt="Captura de pantalla 2024-02-19 a las 19 31 14" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/4c39b5b4-267b-4664-928d-8adf0a139f31">
 
 This script implements a methodology that combines ***deep learning***, ***image and time series processing*** to ***predict hourly electricity consumption for the next day***.
