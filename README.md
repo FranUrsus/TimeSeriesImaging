@@ -1,22 +1,28 @@
  #  Deep learning and time series imaging for the next day electricity consumption forecasts
 
+<img width="1079" alt="Captura de pantalla 2024-02-20 a las 18 46 37" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/495d8749-a0a7-4c2d-a422-482ee77c23a7">
+
+<!---**Alternative 2**
 <img width="956" alt="Captura de pantalla 2024-02-19 a las 19 31 14" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/4c39b5b4-267b-4664-928d-8adf0a139f31">
+-->
 
 This script implements a methodology that combines ***deep learning***, ***image and time series processing*** to ***predict hourly electricity consumption for the next day***.
 
 The proposed methodology consists of 3 phases:
 
-- Data preparation
-- Time series imaging
-- Training of Deep learning models
+- **Data preparation**. Prepare the data accordingly to apply the methodology
+- **Time series imaging**. Transformation of time series into 2D images suitable for training models with deep learning. 
+- **Training of Deep learning models:** Use deep learning algorithms to obtain models capable of predicting the next day's consumption from 2D images of weekly time series.
 
 ## Data preparation
   
-  The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day that will assign the day of consumption to one of 21 clusters. This model will be available for free.
+  The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day. This model will be available for free and will be detailed as below.
+
+This figure shows what the data must look like in order to be processed by the script:
 
 <img width="1008" alt="Captura de pantalla 2024-02-19 a las 19 03 33" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c85737ec-c687-4f9b-bc32-c5b6d673bf31">
 
-> **_NOTE:_** This script does not prepare the data as described, but the model for grouping days of hourly consumption into 21 centroids shown below is freely available in this repository, in case you are interested in completing the next day grouping column, using this model.
+> **_NOTE:_** This script does not prepare the data as described.
 
 ## Clustering model
 
@@ -24,45 +30,47 @@ The centroids of the model that has been used to assign the next day's cluster t
 
 <img width="727" alt="centroids" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d6e7827a-af06-4bf9-9f90-20e59d5a4962">
 
+This model is available for free in model folder.
+
 ## Time series imaging
 
-Time series can be represented as 2D curves representing the value for each instant in the time series, but this way of modelling time series is not the most suitable for training models with deep learning algorithms to make predictions from time series images.
+Time series can be modeled as 2D curves representing the value for each instant in the time series, but this way of modelling time series is not the most suitable for training models with deep learning algorithms to make predictions from time series images.
 
 ### Week consumption
 
-<img width="1466" alt="Captura de pantalla 2024-02-18 a las 10 52 35" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d95f3253-9b4c-4f2d-8ec8-6b46ef72e7e3">
+This figure shows a time series of a user's weekly consumption represented as a curve.
 
-> In order to train machine learning models, each weekly consumption time series will be modelled as a 2D image, as will each of the 21 clusters in the model (one of these images will be the image representing the next day's consumption cluster). All this information will be needed for the supervised machine learning process carried out by the deep learning algorithms.
+![this](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/76bcc5f3-e6df-49c7-b636-0c5b0e17c9ee)
 
 ### Consumption centroid
 
+This figure shows a time series of a  consumption centroid represented as a curve.
+
 <img width="657" alt="Captura de pantalla 2024-02-18 a las 14 02 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/88ecd86f-e984-4e7c-9d83-a5e93b323d59">
+
 
 ### Modelling time series images for deep learning model training
 
 To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific  domain.
- The proposed methodology will model each weekly consumption time series as an image in this specific domain. The same process will be carried out for the 21 centroids representing the next day's consumption. 
+ The proposed methodology will model each weekly consumption time series as an image in the Gramian Angular Field domain. 
  
- Deep leaning models will be trained by providing as inputs the weekly images, and as outputs the images of the consumption cluster for next day, both in this specific format.
- 
-To make predictions using this model, the weekly time series to be predicted will be converted to this specific domain, and the output generated will be a daily image in this specific domain. Finally, the time series will be obtained by applying the inverse process to the transform and will be represented as a curve.
-
 **Example of week consumption time serie in Gramian Field Domain** (The inputs of neural networks)
 
 ![diff_t0](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/84e77093-755f-4cf6-9f66-d624d3c974d8)
 
-**Example of cluster consumption time serie in Gramian Field Domain** (The output of neural networks)
+### Deep learning
 
-![clus_0_gram](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/2c8a1496-72fd-49b4-9d92-55c9c322b51b)
+  Deep leaning model will be trained by providing as inputs the weekly temporal series modelled as Gramian Angular Field images as can be seen in the figure shown in the previous section.. The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
+ 
+The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
 
- ## Deep Learning with Time Series Imaging
+In this output example, the week consumption image with feed the deep learning model activates the first output neurons (cluster 0 next day consumption will be predicted)
 
-Neural network technologies for image Generation models:
+**one_hot_encoding_output** = [1,0,0,0,0,0,0,0,0,...0]
 
-- Variation Autoencoders (VAEs)
-- Generative Adversarial Models (GANs)
-- Auto Regression Models
-- Diffusion Models
+<img width="717" alt="Captura de pantalla 2024-02-20 a las 19 49 50" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/03f03c3f-c536-4a66-bcd5-bec67cc98caf">
+
+To make predictions using the trained model, the weekly time series to be predicted would be converted to Gramian domain, and the output generated by the neural network will be the next day consumption cluster label. 
 
 
 ## Authors ✒️
