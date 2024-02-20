@@ -13,9 +13,9 @@ This script implements a methodology that combines ***deep learning***, ***image
 
 The proposed methodology consists of 3 phases:
 
-- Data preparation
-- Time series imaging
-- Training of Deep learning models
+- **Data preparation**. Prepare the data accordingly to apply the methodology
+- **Time series imaging**. Transformation of time series into 2D images suitable for training models with deep learning. 
+- **Training of Deep learning models:** Use deep learning algorithms to obtain models capable of predicting the next day's consumption from 2D images of weekly time series.
 
 ## Data preparation
   
@@ -35,7 +35,7 @@ The centroids of the model that has been used to assign the next day's cluster t
 
 This model is available for free in model folder.
 
-## Time series imaging
+## Time series imaging and deep learning
 
 Time series can be modeled as 2D curves representing the value for each instant in the time series, but this way of modelling time series is not the most suitable for training models with deep learning algorithms to make predictions from time series images.
 
@@ -74,15 +74,6 @@ In this output example, the week consumption image with feed the deep learning m
 [1,0,0,0,0,0,0,0,0,...0]
 
 <img width="394" alt="Captura de pantalla 2024-02-20 a las 19 15 29" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/4ce50b72-0100-4790-bb86-92623e47f95b">
-
- ## Deep Learning with Time Series Imaging
-
-Neural network technologies for image Generation models:
-
-- Variation Autoencoders (VAEs)
-- Generative Adversarial Models (GANs)
-- Auto Regression Models
-- Diffusion Models
 
 
 ## Authors ✒️
