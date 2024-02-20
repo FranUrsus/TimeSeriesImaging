@@ -65,9 +65,15 @@ To make predictions using this model, the weekly time series to be predicted wou
 
 ![diff_t0](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/84e77093-755f-4cf6-9f66-d624d3c974d8)
 
-**Example of cluster consumption time serie in Gramian Field Domain** (The output of neural networks)
+**Example of consumption cluster predicted label** (The output of neural networks)
 
-![clus_0_gram](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/2c8a1496-72fd-49b4-9d92-55c9c322b51b)
+The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
+
+In this output example, the week consumption image with feed the deep learning model, 
+
+[1,0,0,0,0,0,0,0,0,...0]
+
+<img width="394" alt="Captura de pantalla 2024-02-20 a las 19 15 29" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/4ce50b72-0100-4790-bb86-92623e47f95b">
 
  ## Deep Learning with Time Series Imaging
 
