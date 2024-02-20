@@ -43,7 +43,7 @@ Time series can be modeled as 2D curves representing the value for each instant 
 
 This figure shows a time series of a user's weekly consumption represented as a curve.
 
-<img width="1466" alt="Captura de pantalla 2024-02-18 a las 10 52 35" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d95f3253-9b4c-4f2d-8ec8-6b46ef72e7e3">
+![this](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/76bcc5f3-e6df-49c7-b636-0c5b0e17c9ee)
 
 > In order to train machine learning models, each weekly consumption time series will be modelled as a 2D image, as will each of the 21 clusters in the model (one of these images will be the image representing the next day's consumption cluster). All this information will be needed for the supervised machine learning process carried out by the deep learning algorithms.
 
