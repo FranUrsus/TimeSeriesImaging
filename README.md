@@ -45,11 +45,12 @@ This figure shows a time series of a user's weekly consumption represented as a 
 
 ![this](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/76bcc5f3-e6df-49c7-b636-0c5b0e17c9ee)
 
-> In order to train machine learning models, each weekly consumption time series will be modelled as a 2D image, as will each of the 21 clusters in the model (one of these images will be the image representing the next day's consumption cluster). All this information will be needed for the supervised machine learning process carried out by the deep learning algorithms.
-
 ### Consumption centroid
 
+This figure shows a time series of a  consumption centroid represented as a curve.
+
 <img width="657" alt="Captura de pantalla 2024-02-18 a las 14 02 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/88ecd86f-e984-4e7c-9d83-a5e93b323d59">
+
 
 ### Modelling time series images for deep learning model training
 
