@@ -66,8 +66,7 @@ To obtain better results in training models based on time series images with dee
 
 The following figure shows an example of some weekly consumptions modelled using GRAM matrices, in which the difference between each value of a time series with the rest is plotted for each of the weekly time series.
 
-![bla](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/34358f04-529c-4d0b-b6be-916876c7f231)
-
+![test](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/01dec3a8-6ad4-42a1-a245-f599440ba393)
 
 #### Output
 The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
