@@ -61,7 +61,15 @@ To obtain better results in training models based on time series images with dee
 ### Deep learning
 
   Deep leaning model will be trained by providing as inputs the weekly temporal series modelled as Gramian Angular Field images as can be seen in the figure shown in the previous section.. The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
- 
+
+### Input
+
+The following figure shows an example of some weekly consumptions modelled using GRAM matrices, in which the difference between each value of a time series with the rest is plotted for each of the weekly time series.
+
+![bla](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/34358f04-529c-4d0b-b6be-916876c7f231)
+
+
+#### Output
 The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
 
 In this output example, the week consumption image with feed the deep learning model activates the first output neurons (cluster 0 next day consumption will be predicted)
