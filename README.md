@@ -56,9 +56,11 @@ To obtain better results in training models based on time series images with dee
 
  Modelling a time series as a differential GRAM matrix allows to represent how different each value of the time series is with respect to the rest of the values of the series, as shown in the following example:
  
-**Example of week consumption time serie in Gramian Field Domain** (The inputs of neural networks)
+**Example of week consumption time serie in Gramian Field Domain**
 
 ![diff_t0](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/84e77093-755f-4cf6-9f66-d624d3c974d8)
+
+This type of images will be used by deep learning algorithms to train models capable of predicting the next day's hourly consumption based on weekly consumption. 
 
 ### Deep learning
 
