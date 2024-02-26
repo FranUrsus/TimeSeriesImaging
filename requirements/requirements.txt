@@ -7,13 +7,20 @@ pandas
 # Plot results
 matplotlib
 
-## Time series imaging
+## Time series imaging (get ts in Gram domain)
 pyts
 
-## Gramian matrix to RGB images
+## Image processing (Gram to RGB, ...)
 PIL
 
 ## Deep learning
 keras
 numpy
+sklearn
+
+## Generate random numbers
+random
+
+## Folder access
+pathlib
 

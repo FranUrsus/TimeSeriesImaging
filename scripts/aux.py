@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import random
 
+from sklearn.model_selection import train_test_split
+
 
 # return a generated random color
 def random_color_generator():
@@ -33,3 +35,5 @@ def plot_time_series(time_series):
     plt.xlabel('Hour', fontsize=15)
     plt.ylabel('Consumption (Wh)', fontsize=15)
     plt.show()
+
+

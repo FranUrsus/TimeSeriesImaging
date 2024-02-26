@@ -140,7 +140,7 @@ def create_rgb_gramian_image(gram_sum, gram_diff):
     return x_train_gaf
 
 
-# Save time serie in gramian matrix format as png
+# Save time series in gramian matrix format as png
 def save_rgb_images(gram_images_df):
     import matplotlib.image as img
     row_id = 0
