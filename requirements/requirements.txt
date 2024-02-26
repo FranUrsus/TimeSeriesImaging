@@ -1,0 +1,19 @@
+# Jupyter
+jupyter
+
+# Data preparation
+pandas
+
+# Plot results
+matplotlib
+
+## Time series imaging
+pyts
+
+## Gramian matrix to RGB images
+PIL
+
+## Deep learning
+keras
+numpy
+

@@ -1,10 +1,22 @@
+import numpy
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas
+import pandas as pd
 from pyts.image import GramianAngularField
+import matplotlib.image as img
 
 
-# return a transformed Gram Angular Field image
+# return a transformed Gram Angular Field image (difference)
 def transform_image_with_gram_angular_field(time_series, method='difference'):
+    np_array_from_ts = np.array([time_series])
+    gaf = GramianAngularField(method=method)
+    gaf_ts = gaf.fit_transform(np_array_from_ts)
+    return gaf_ts[0]
+
+
+# return a transformed Gram Angular Field image (sum)
+def transform_image_with_gram_angular_field_sum(time_series, method='summation'):
     np_array_from_ts = np.array([time_series])
     gaf = GramianAngularField(method=method)
     gaf_ts = gaf.fit_transform(np_array_from_ts)
@@ -73,3 +85,65 @@ def plot_gram_angular_field(time_series, gaf_ts_diff, type_ts='week'):
     fig.colorbar(im, cax=ax_cbar)
 
     plt.show()
+
+
+# plot a list of gram images displayed in n_rows * n_cols matrix format
+def plot_all_gram_week_ts_images(gram_images, n_rows, n_cols):
+    from mpl_toolkits.axes_grid1 import ImageGrid
+
+    # Plot the n_rows*n_cols Gram angular fields for the week time series
+    fig = plt.figure(figsize=(10, 5))
+
+    grid = ImageGrid(fig, 111, nrows_ncols=(n_rows, n_cols), axes_pad=0.1, share_all=True,
+                     cbar_mode='single')
+    for i, ax in enumerate(grid):
+        im = ax.imshow(gram_images[i], cmap='rainbow', origin='lower', vmin=-1., vmax=1.)
+        grid[0].get_yaxis().set_ticks([])
+        grid[0].get_xaxis().set_ticks([])
+        plt.colorbar(im, cax=grid.cbar_axes[0])
+        ax.cax.toggle_label(True)
+
+    fig.suptitle(f"Gramian angular difference fields for the {n_rows * n_cols} first week consumption time series", y=1)
+
+    plt.show()
+
+
+# input datatype data : normalize time serie in range [0,1]
+def normalize_ts(ts):
+    return (ts - min(ts)) / (max(ts) - min(ts))
+
+
+# return polar coords of time series representation
+# phi: angles
+# r: radious
+def polar_rep(data):
+    phi = np.arccos(data)
+    r = data
+    return phi, r
+
+
+def plot_polar_coords(tetha, radious):
+    fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+    ax.plot(tetha, radious)
+    ax.set_rmax(1)
+    ax.set_rticks(np.linspace(0, 1, 3))
+    ax.set_rlabel_position(-22.5)  # Move radial labels away from plotted line
+    ax.grid(True)
+    ax.set_title("Time series polar coordinates representation", va='bottom')
+    plt.show()
+
+
+# Create a RGB Gram image from summ and dif images. ***Not used***
+# Another alternative to generate RGB Gram images from time series in Gram matrices domain
+def create_rgb_gramian_image(gram_sum, gram_diff):
+    x_train_gaf = np.concatenate((gram_sum, gram_diff, np.zeros(gram_diff.shape)), axis=-1)
+    return x_train_gaf
+
+
+# Save time serie in gramian matrix format as png
+def save_rgb_images(gram_images_df):
+    import matplotlib.image as img
+    row_id = 0
+    for ts_gram_matrix in gram_images_df:
+        img.imsave(f'../data/images/input/{row_id}.png', ts_gram_matrix, cmap="rainbow")
+        row_id += 1

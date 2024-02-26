@@ -1,19 +1,5 @@
-import importlib
 import matplotlib.pyplot as plt
 import random
-
-
-# return if a library is installed
-def check_library_installed(library_name):
-    print(library_name)
-    installed = True
-    try:
-        importlib.import_module(library_name)
-        print(library_name + " already installed")
-    except ImportError as e:
-        print("Error -> ", e)
-        installed = False
-    return installed
 
 
 # return a generated random color
