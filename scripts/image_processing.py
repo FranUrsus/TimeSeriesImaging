@@ -1,8 +1,5 @@
-import numpy
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas
-import pandas as pd
 from pyts.image import GramianAngularField
 import matplotlib.image as img
 
@@ -23,9 +20,7 @@ def transform_image_with_gram_angular_field_sum(time_series, method='summation')
     return gaf_ts[0]
 
 
-# Plot  time series in Gram Angular Field domain
-# type 'week' or 'cluster'
-
+# Plot  time series in Gram Angular Field domain. type 'week' or 'cluster'
 def plot_gram_angular_field(time_series, gaf_ts_diff, type_ts='week'):
     # Plot the time series and its recurrence plot
     width_ratios = (2, 7, 0.4)
@@ -38,15 +33,14 @@ def plot_gram_angular_field(time_series, gaf_ts_diff, type_ts='week'):
                           left=0.1, right=0.9, bottom=0.1, top=0.9,
                           wspace=0.1, hspace=0.1)
     time_points = [*range(0, len(time_series), 1)]
-    # Define the ticks and their labels for both axes
 
+    # Define the ticks and their labels for both axes
     if type_ts == 'week':
         time_ticks = np.linspace(0, len(time_points), 8)
         time_tick_labels = time_ticks
     else:
         time_ticks = np.linspace(0, 24, 5)
         time_tick_labels = time_ticks
-
     value_ticks = [*range(0, max(time_series), 500)]
     reversed_value_ticks = value_ticks[::-1]
 
@@ -93,7 +87,6 @@ def plot_all_gram_week_ts_images(gram_images, n_rows, n_cols):
 
     # Plot the n_rows*n_cols Gram angular fields for the week time series
     fig = plt.figure(figsize=(10, 5))
-
     grid = ImageGrid(fig, 111, nrows_ncols=(n_rows, n_cols), axes_pad=0.1, share_all=True,
                      cbar_mode='single')
     for i, ax in enumerate(grid):
@@ -102,9 +95,7 @@ def plot_all_gram_week_ts_images(gram_images, n_rows, n_cols):
         grid[0].get_xaxis().set_ticks([])
         plt.colorbar(im, cax=grid.cbar_axes[0])
         ax.cax.toggle_label(True)
-
     fig.suptitle(f"Gramian angular difference fields for the {n_rows * n_cols} first week consumption time series", y=1)
-
     plt.show()
 
 
@@ -135,15 +126,25 @@ def plot_polar_coords(tetha, radious):
 
 # Create a RGB Gram image from summ and dif images. ***Not used***
 # Another alternative to generate RGB Gram images from time series in Gram matrices domain
-def create_rgb_gramian_image(gram_sum, gram_diff):
+def create_rgb_gram_image(gram_sum, gram_diff):
     x_train_gaf = np.concatenate((gram_sum, gram_diff, np.zeros(gram_diff.shape)), axis=-1)
     return x_train_gaf
 
 
-# Save time series in gramian matrix format as png
-def save_rgb_images(gram_images_df):
-    import matplotlib.image as img
+# Save time series in Gram matrix format as png
+def save_rgb_images(gram_images_df, labels):
     row_id = 0
     for ts_gram_matrix in gram_images_df:
-        img.imsave(f'../data/images/input/{row_id}.png', ts_gram_matrix, cmap="rainbow")
+        img.imsave(f'../data/images/input/next_day_cluster_{labels[row_id]}/{row_id}.png', ts_gram_matrix,
+                   cmap="rainbow")
         row_id += 1
+
+
+def visualize_train_dataset(train_ds, class_names):
+    plt.figure(figsize=(10, 10))
+    for images, labels in train_ds.take(1):
+        for i in range(9):
+            ax = plt.subplot(3, 3, i + 1)
+            plt.imshow(images[i].numpy().astype("uint8"))
+            plt.title(class_names[labels[i]])
+            plt.axis("off")

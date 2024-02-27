@@ -15,6 +15,7 @@ PIL
 
 ## Deep learning
 keras
+tensorflow
 numpy
 sklearn
 
@@ -23,4 +24,7 @@ random
 
 ## Folder access
 pathlib
+
+## Order file system arrays for model training
+natsort
 

@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import random
-
-from sklearn.model_selection import train_test_split
+import os
 
 
 # return a generated random color
@@ -37,3 +36,18 @@ def plot_time_series(time_series):
     plt.show()
 
 
+def create_folder_structure(next_day_clusters):
+    path = "../data/images/input/"
+    for clus in next_day_clusters:
+        path_clus = path + 'next_day_cluster_' + str(clus)
+        if not (os.path.exists(path_clus)):
+            os.mkdir(path_clus)
+
+
+# return list with class names
+def get_cluster_class_names(next_day_clusters):
+    classes = []
+    for clus in next_day_clusters:
+        path_clus = 'next_day_cluster_' + str(clus)
+        classes.append(path_clus)
+    return classes
