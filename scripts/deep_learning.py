@@ -5,6 +5,7 @@ from tensorflow.keras import Rescaling
 import keras
 import pathlib
 import keras as tf
+import matplotlib.pyplot as plt
 
 
 class DeepLearning:
@@ -16,7 +17,7 @@ class DeepLearning:
                  batch_size=32,
                  epochs=100,
                  model=Sequential()):
-
+        self.history = None
         self.batch_size = batch_size
         self.class_names = None
         self.val_ds = None
@@ -30,7 +31,6 @@ class DeepLearning:
 
     # split dataset in train and test for supervised learning process
     def split_train_and_test(self, dataset_url):
-
         data_dir = pathlib.Path(dataset_url)
 
         self.train_ds = tf.utils.image_dataset_from_directory(
@@ -58,7 +58,6 @@ class DeepLearning:
 
     # train a deep learning model for next day consumption hourly forecasting
     def train_model(self):
-
         self.num_classes = len(self.class_names)
 
         self.model.add(Rescaling(1. / 255, input_shape=self.input_shape)),
@@ -83,9 +82,29 @@ class DeepLearning:
                            optimizer=keras.optimizers.Adam(),
                            metrics=['accuracy'])
 
-        self.model.fit(train_data=self.train_ds,
-                       epochs=self.epochs,
-                       validation_data=self.val_ds)
+        self.history = self.model.fit(train_data=self.train_ds,
+                                      epochs=self.epochs,
+                                      validation_data=self.val_ds)
 
-        return self.model
+    def show_results(self):
+        acc = self.history.history['accuracy']
+        val_acc = self.history.history['val_accuracy']
 
+        loss = self.history.history['loss']
+        val_loss = self.history.history['val_loss']
+
+        epochs_range = range(self.epochs)
+
+        plt.figure(figsize=(8, 8))
+        plt.subplot(1, 2, 1)
+        plt.plot(epochs_range, acc, label='Training Accuracy')
+        plt.plot(epochs_range, val_acc, label='Validation Accuracy')
+        plt.legend(loc='lower right')
+        plt.title('Training and Validation Accuracy')
+
+        plt.subplot(1, 2, 2)
+        plt.plot(epochs_range, loss, label='Training Loss')
+        plt.plot(epochs_range, val_loss, label='Validation Loss')
+        plt.legend(loc='upper right')
+        plt.title('Training and Validation Loss')
+        plt.show()
