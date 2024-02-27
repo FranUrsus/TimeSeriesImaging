@@ -78,6 +78,8 @@ next_day_cluster_0 .. next_day_cluster_n
 
 <img width="553" alt="Captura de pantalla 2024-02-27 a las 16 45 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/02fd82e2-9907-4afb-b80e-327238b9a393">
 
+<img width="599" alt="Captura de pantalla 2024-02-27 a las 16 50 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0c62304c-c877-4479-8b69-cc162ff8394d">
+
 
 #### Output
 The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
