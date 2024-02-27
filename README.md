@@ -76,7 +76,7 @@ The Gramm matrix images of the weekly consumption time series will be stored in 
 
 next_day_cluster_0 .. next_day_cluster_n
 
-<img width="559" alt="Captura de pantalla 2024-02-27 a las 16 41 39" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1f605bcf-c8c3-4468-a278-3cebdc839229">
+<img width="553" alt="Captura de pantalla 2024-02-27 a las 16 45 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/02fd82e2-9907-4afb-b80e-327238b9a393">
 
 
 #### Output
