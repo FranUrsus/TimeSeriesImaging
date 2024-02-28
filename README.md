@@ -72,13 +72,6 @@ The following figure shows an example of some weekly consumptions modelled using
 
 ![test](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/01dec3a8-6ad4-42a1-a245-f599440ba393)
 
-The Gramm matrix images of the weekly consumption time series will be stored in a folder with the name of the class they belong to (next day cluster).
-
-next_day_cluster_0 .. next_day_cluster_n
-
-<img width="553" alt="Captura de pantalla 2024-02-27 a las 16 45 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/02fd82e2-9907-4afb-b80e-327238b9a393">
-
-<img width="599" alt="Captura de pantalla 2024-02-27 a las 16 50 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0c62304c-c877-4479-8b69-cc162ff8394d">
 
 
 #### Output
@@ -89,6 +82,24 @@ In this output example, the week consumption image with feed the deep learning m
 **one_hot_encoding_output** = [1,0,0,0,0,0,0,0,0,...0]
 
 <img width="717" alt="Captura de pantalla 2024-02-20 a las 19 49 50" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/03f03c3f-c536-4a66-bcd5-bec67cc98caf">
+
+### Data preparation for deep learning model training
+
+The Gramm matrix images of the weekly consumption time series will be stored in a folder with the name of the class they belong to (next day cluster).
+
+next_day_cluster_0 .. next_day_cluster_n
+
+<img width="553" alt="Captura de pantalla 2024-02-27 a las 16 45 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/02fd82e2-9907-4afb-b80e-327238b9a393">
+
+<img width="599" alt="Captura de pantalla 2024-02-27 a las 16 50 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0c62304c-c877-4479-8b69-cc162ff8394d">
+
+**Split dataset in train and validation data**
+
+Once the weekly consumption RGB images (Gram matrices) are available, and organized in folders according to the class to which they belong (next day cluster), the data set is divided into validation and test as a previous step to the training of deep learning models.
+
+<img width="812" alt="Captura de pantalla 2024-02-28 a las 11 59 46" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ae430f38-3f32-48a4-8065-f36c517b9b15">
+
+
 
 #### Predictions
 
