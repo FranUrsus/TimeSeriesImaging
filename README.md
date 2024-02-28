@@ -22,6 +22,8 @@ This figure shows what the data must look like in order to be processed by the s
 
 <img width="1008" alt="Captura de pantalla 2024-02-19 a las 19 03 33" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c85737ec-c687-4f9b-bc32-c5b6d673bf31">
 
+In the example that will be used to describe the methodology, a data set with 529 consecutive weekly consumptions of the same consumer has been used.
+
 > **_NOTE:_** This script does not prepare the data as described.
 
 ## Clustering model
@@ -52,7 +54,7 @@ This figure shows a time series of a  consumption centroid represented as a curv
 ### Modelling time series images for deep learning model training
 
 To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific  domain.
- The proposed methodology will model each weekly consumption time series as an image in the Gramian Angular Field domain. 
+**The proposed methodology will model each weekly consumption time series as an image in the Gramian Angular Field domain**. 
 
  Modelling a time series as a differential GRAM matrix allows to represent how different each value of the time series is with respect to the rest of the values of the series, as shown in the following example:
  
@@ -64,7 +66,7 @@ This type of images will be used by deep learning algorithms to train models cap
 
 ### Deep learning
 
-  Deep leaning model will be trained by providing as inputs the weekly temporal series modelled as Gramian Angular Field images as can be seen in the figure shown in the previous section.. The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
+  Deep leaning model will be trained by providing as inputs the weekly temporal series modelled as Gramian Angular Field as RGB images. The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
 
 ### Input
 
@@ -72,13 +74,6 @@ The following figure shows an example of some weekly consumptions modelled using
 
 ![test](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/01dec3a8-6ad4-42a1-a245-f599440ba393)
 
-The Gramm matrix images of the weekly consumption time series will be stored in a folder with the name of the class they belong to (next day cluster).
-
-next_day_cluster_0 .. next_day_cluster_n
-
-<img width="553" alt="Captura de pantalla 2024-02-27 a las 16 45 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/02fd82e2-9907-4afb-b80e-327238b9a393">
-
-<img width="599" alt="Captura de pantalla 2024-02-27 a las 16 50 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0c62304c-c877-4479-8b69-cc162ff8394d">
 
 
 #### Output
@@ -88,7 +83,25 @@ In this output example, the week consumption image with feed the deep learning m
 
 **one_hot_encoding_output** = [1,0,0,0,0,0,0,0,0,...0]
 
-<img width="717" alt="Captura de pantalla 2024-02-20 a las 19 49 50" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/03f03c3f-c536-4a66-bcd5-bec67cc98caf">
+<img width="386" alt="Captura de pantalla 2024-02-28 a las 12 17 19" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9d092ac6-a684-4f3e-aa7e-db2a2ece4e15">
+
+### Data preparation for deep learning model training
+
+The Gramm matrix images of the weekly consumption time series will be stored in a folder with the name of the class they belong to (next day cluster).
+
+next_day_cluster_0 .. next_day_cluster_n
+
+<img width="553" alt="Captura de pantalla 2024-02-27 a las 16 45 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/02fd82e2-9907-4afb-b80e-327238b9a393">
+
+<img width="599" alt="Captura de pantalla 2024-02-27 a las 16 50 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0c62304c-c877-4479-8b69-cc162ff8394d">
+
+**Split dataset in train and validation data**
+
+Once the weekly consumption RGB images (Gram matrices) are available, and organized in folders according to the class to which they belong (next day cluster), the data set is divided into validation and test as a previous step to the training of deep learning models.
+
+<img width="812" alt="Captura de pantalla 2024-02-28 a las 11 59 46" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ae430f38-3f32-48a4-8065-f36c517b9b15">
+
+
 
 #### Predictions
 
