@@ -22,6 +22,8 @@ This figure shows what the data must look like in order to be processed by the s
 
 <img width="1008" alt="Captura de pantalla 2024-02-19 a las 19 03 33" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c85737ec-c687-4f9b-bc32-c5b6d673bf31">
 
+In the example described, a data set with 529 consecutive weekly consumptions of the same consumer has been used.
+
 > **_NOTE:_** This script does not prepare the data as described.
 
 ## Clustering model
