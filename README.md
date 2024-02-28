@@ -81,7 +81,7 @@ In this output example, the week consumption image with feed the deep learning m
 
 **one_hot_encoding_output** = [1,0,0,0,0,0,0,0,0,...0]
 
-<img width="717" alt="Captura de pantalla 2024-02-20 a las 19 49 50" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/03f03c3f-c536-4a66-bcd5-bec67cc98caf">
+<img width="386" alt="Captura de pantalla 2024-02-28 a las 12 17 19" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9d092ac6-a684-4f3e-aa7e-db2a2ece4e15">
 
 ### Data preparation for deep learning model training
 
