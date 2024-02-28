@@ -54,7 +54,7 @@ This figure shows a time series of a  consumption centroid represented as a curv
 ### Modelling time series images for deep learning model training
 
 To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific  domain.
- The proposed methodology will model each weekly consumption time series as an image in the Gramian Angular Field domain. 
+**The proposed methodology will model each weekly consumption time series as an image in the Gramian Angular Field domain**. 
 
  Modelling a time series as a differential GRAM matrix allows to represent how different each value of the time series is with respect to the rest of the values of the series, as shown in the following example:
  
