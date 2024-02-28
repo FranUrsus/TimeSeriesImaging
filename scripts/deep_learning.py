@@ -1,7 +1,8 @@
 import tensorflow.data
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
-from tensorflow.keras import Rescaling
+from tensorflow.keras.layers import Rescaling
+
 import keras
 import pathlib
 import keras as tf
@@ -35,7 +36,7 @@ class DeepLearning:
 
         self.train_ds = tf.utils.image_dataset_from_directory(
             data_dir,
-            validation_split=0.8,
+            validation_split=0.2,
             subset="training",
             seed=123,
             image_size=(self.img_height, self.img_width),
@@ -49,12 +50,16 @@ class DeepLearning:
             image_size=(self.img_height, self.img_width),
             batch_size=self.batch_size)
 
-        autotune = tensorflow.data.AUTOTUNE
-
-        self.train_ds = self.train_ds.cache().prefetch(buffer_size=autotune)
-        self.val_ds = self.val_ds.cache().prefetch(buffer_size=autotune)
-
         self.class_names = self.train_ds.class_names
+
+        print("class names:"+str(self.class_names))
+
+        #autotune = tensorflow.data.AUTOTUNE
+
+        #self.train_ds = self.train_ds.cache().prefetch(buffer_size=autotune)
+        #self.val_ds = self.val_ds.cache().prefetch(buffer_size=autotune)
+
+
 
     # train a deep learning model for next day consumption hourly forecasting
     def train_model(self):

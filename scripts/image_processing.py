@@ -148,3 +148,24 @@ def visualize_train_dataset(train_ds, class_names):
             plt.imshow(images[i].numpy().astype("uint8"))
             plt.title(class_names[labels[i]])
             plt.axis("off")
+
+
+def plot_rgb_channels(img):
+
+    np_image = np.asarray(img)
+
+    plt.figure(figsize=(12, 6))
+    plt.subplot(131)
+
+    plt.imshow(np_image[:, :, 0], cmap='Reds', vmin=0, vmax=255)
+    plt.title("Red Channel")
+    plt.subplot(132)
+
+    plt.imshow(np_image[:, :, 1], cmap='Greens', vmin=0, vmax=255)
+    plt.title("Green Channel")
+    plt.subplot(133)
+
+    plt.imshow(np_image[:, :, 2], cmap='Blues', vmin=0, vmax=255)
+    plt.title("Blue Channel")
+
+    plt.show()
