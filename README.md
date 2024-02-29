@@ -103,7 +103,6 @@ Once the weekly consumption RGB images (Gram matrices) are available, and organi
 
 ### Deep learning model architecture
 
-![cube_NN_model](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/013383cf-14f8-4881-ace1-1c64c349977a)
 
 The proposed deep learning architecture consists of a series of neurons connected along a series of convolution and reduction layers (pooling layers) finally connected to a fully connected neural network.
 
