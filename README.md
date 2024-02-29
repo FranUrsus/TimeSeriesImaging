@@ -105,6 +105,16 @@ Once the weekly consumption RGB images (Gram matrices) are available, and organi
 
 ![cube_NN_model](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/013383cf-14f8-4881-ace1-1c64c349977a)
 
+The proposed deep learning architecture consists of a series of neurons connected along a series of convolution and reduction layers (pooling layers) finally connected to a fully connected neural network.
+
+The convolution operations allow the model to learn features from the images (the deeper the images, the more detail), and the reduction operations extract the relevant features and reduce the size of the neurons to speed up and enable the learning process.
+
+For pooling, 2x2 kernels are used to halve the size of the neurons modeling feature maps.
+
+Three convolutional blocks (32,64,128) are proposed for detailed learning of relevant features and patterns in the images.
+
+All the output neurons that connect the kernels of the convolutional blocks with the inputs of the feature map neurons are connected to a relu. Each feature map goes through a 2x2 maxpooling block to halve its size.
+
 
 #### Predictions
 
