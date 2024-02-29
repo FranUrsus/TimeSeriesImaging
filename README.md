@@ -101,6 +101,9 @@ Once the weekly consumption RGB images (Gram matrices) are available, and organi
 
 <img width="812" alt="Captura de pantalla 2024-02-28 a las 11 59 46" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ae430f38-3f32-48a4-8065-f36c517b9b15">
 
+### Deep learning model arquitecture
+
+![cube_NN_model](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/013383cf-14f8-4881-ace1-1c64c349977a)
 
 
 #### Predictions
