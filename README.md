@@ -115,6 +115,8 @@ Three convolutional blocks (32,64,128) are proposed for detailed learning of rel
 
 All the output neurons that connect the kernels of the convolutional blocks with the inputs of the feature map neurons are connected to a relu. Each feature map goes through a 2x2 maxpooling block to halve its size.
 
+Finally the n-dimensional model is flattened and passed through 21 neurons to which the softmax function is applied to obtain the probability that the next day of consumption of the input weekly consumption image belongs to each of the 21 centroids.
+
 
 #### Predictions
 
