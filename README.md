@@ -103,6 +103,7 @@ Once the weekly consumption RGB images (Gram matrices) are available, and organi
 
 ### Deep learning model architecture
 
+![metodologia_DL_TS_forecasting](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/76c57d16-7202-4575-9f38-12ce379cdf58)
 
 The proposed deep learning architecture consists of a series of neurons connected along a series of convolution and reduction layers (pooling layers) finally connected to a fully connected neural network.
 
