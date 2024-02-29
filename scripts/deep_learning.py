@@ -1,6 +1,6 @@
 import tensorflow.data
-from tensorflow.keras import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
+from keras import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Input
 from tensorflow.keras.layers import Rescaling
 
 import keras
@@ -32,20 +32,25 @@ class DeepLearning:
 
     # split dataset in train and test for supervised learning process
     def split_train_and_test(self, dataset_url):
+
         data_dir = pathlib.Path(dataset_url)
 
         self.train_ds = tf.utils.image_dataset_from_directory(
             data_dir,
-            validation_split=0.2,
+            validation_split=0.3,
             subset="training",
             seed=123,
+            labels='inferred',
+            label_mode="categorical",
             image_size=(self.img_height, self.img_width),
             batch_size=self.batch_size)
 
         self.val_ds = tf.utils.image_dataset_from_directory(
             data_dir,
-            validation_split=0.2,
+            validation_split=0.3,
             subset="validation",
+            label_mode="categorical",
+            labels='inferred',
             seed=123,
             image_size=(self.img_height, self.img_width),
             batch_size=self.batch_size)
@@ -59,27 +64,27 @@ class DeepLearning:
         #self.train_ds = self.train_ds.cache().prefetch(buffer_size=autotune)
         #self.val_ds = self.val_ds.cache().prefetch(buffer_size=autotune)
 
-
-
     # train a deep learning model for next day consumption hourly forecasting
     def train_model(self):
         self.num_classes = len(self.class_names)
 
-        self.model.add(Rescaling(1. / 255, input_shape=self.input_shape)),
+        self.model.add(Input(shape=self.input_shape))
+
+        self.model.add(Rescaling(1. / 255)),
 
         self.model.add(Conv2D(32,
-                              kernel_size=(3, 3),
+                              kernel_size=(5, 5),
                               activation='relu'))
         self.model.add(MaxPooling2D(pool_size=(2, 2)))
 
         self.model.add(Conv2D(64,
-                              kernel_size=(3, 3),
+                              kernel_size=(5, 5),
                               activation='relu'))
         self.model.add(MaxPooling2D(pool_size=(2, 2)))
 
         self.model.add(Flatten())
 
-        self.model.add(Dense(64, activation='relu'))
+        self.model.add(Dense(128, activation='relu'))
 
         self.model.add(Dense(self.num_classes, activation='softmax'))
 
@@ -87,7 +92,7 @@ class DeepLearning:
                            optimizer=keras.optimizers.Adam(),
                            metrics=['accuracy'])
 
-        self.history = self.model.fit(train_data=self.train_ds,
+        self.history = self.model.fit(self.train_ds,
                                       epochs=self.epochs,
                                       validation_data=self.val_ds)
 
