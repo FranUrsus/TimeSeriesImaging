@@ -110,10 +110,6 @@ Once the weekly consumption RGB images (Gram matrices) are available, and organi
 
 To make predictions with the trained model, the weekly time series to be predicted would be first converted to Gramian domain. The output activated by the neural network will be the predicted next day consumption cluster label. 
 
-
-
-**Describir la arquitectura del modelo cuando lo tengamos disponoble: Capas convolucionales, de max pooling, resoluciones de entrada, salidas, feed forward architecture, ...)**
-
 ## Authors ✒️
 
 * **Francisco Rodríguez Gómez** 
