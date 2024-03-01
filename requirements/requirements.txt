@@ -18,6 +18,7 @@ keras
 tensorflow
 numpy
 sklearn
+kerastuner
 
 ## Generate random numbers
 random

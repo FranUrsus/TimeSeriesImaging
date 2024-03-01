@@ -169,3 +169,33 @@ def plot_rgb_channels(img):
     plt.title("Blue Channel")
 
     plt.show()
+
+
+## only uses for cube plots ad-hoc generation for graphical abstract and neural network backbone modeling
+def cube_plot(axes, colors):
+
+    # Create axis
+    #axes = [3, 9, 3]
+
+    # Create Data
+    data = np.ones(axes, dtype=np.bool_)
+
+    # Control Transparency
+    alpha = 0.9
+
+    # Control colour
+    #colors = np.empty(axes + [4], dtype=np.float32)
+
+    #colors[:] = [0, 1, 0, alpha]  # red
+
+    #colors[0] = [1, 0, 0, alpha]  # red
+    #colors[1] = [0, 1, 0, alpha]  # green
+    #colors[2] = [0, 0, 1, alpha]  # blue
+
+    # Plot figure
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+
+    # Voxels is used to customizations of the
+    # sizes, positions and colors.
+    ax.voxels(data, facecolors=colors, edgecolors='k')
