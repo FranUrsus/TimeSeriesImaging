@@ -143,14 +143,14 @@ class DeepLearning:
 
         # Third conv-pooling
         model.add(Conv2D(
-            hp.Int("conv_2", min_value=32, max_value=64, step=32),
+            hp.Int("conv_3", min_value=32, max_value=128, step=32),
             kernel_size=(3, 3),
             activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
 
         # fully connected layer
         model.add(Flatten())
-        model.add(Dense(hp.Int('dense', min_value=256,
+        model.add(Dense(hp.Int('dense_units', min_value=256,
                         max_value=768,
                         step=256),
                         activation='relu'))
