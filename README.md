@@ -130,6 +130,17 @@ Finally the n-dimensional model is flattened and passed through 21 neurons to wh
 
 To make predictions with the trained model, the weekly time series to be predicted would be first converted to Gramian domain. The output activated by the neural network will be the predicted next day consumption cluster label. 
 
+
+## LSTM 
+
+En este enfoque se van a entrenar modelos basados en Deep Learning (LSTM) predecir series temporales diarias a partir de las series temporales de consumo semanal sin convertir las series temporales en imágenes.
+El primer paso consiste en preparar el conjunto de datos de forma adecuada para el entrenamiento de modelos con redes neuronales LSTM.
+
+<img width="854" alt="Captura de pantalla 2024-03-06 a las 14 09 46" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1a5044cf-4e75-4dcc-9d53-acf8eec11b4d">
+
+### LSTM Models
+
+
 ## Authors ✒️
 
 * **Francisco Rodríguez Gómez** 
