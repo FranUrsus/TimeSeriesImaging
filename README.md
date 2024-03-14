@@ -1,6 +1,6 @@
  #  Deep learning and time series imaging for the next day electricity consumption forecasts
 
-![ESQUEMA_TS](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/b3a0e5a4-bed3-4687-8392-8e19370ae13b)
+![ESQUEMA_TS](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1c0bc862-bebd-45ec-b19f-2c11c3a48d47)
 
 
 <!---**Alternative 2**
@@ -54,11 +54,11 @@ This figure shows a time series of a  consumption centroid represented as a curv
 
 
 
-
 ### Modelling time series images for deep learning model training
 
 To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific  domain.
-**The proposed methodology models each 1D curve of each weekly time series as an RGB image in which the pixels of each channel are represented by the Gramian Angular Field Summation, difference and Markov transition transforms. The information that each of these models provides to the time series will be of great help for training and pattern discovery in the neural network.**. 
+
+**The proposed methodology models each 1D curve of each weekly time series as an three channel image in which the pixels of each channel are represented by the Gramian Angular Field Summation and difference and the Markov transition models. The information that each of these models provides to the time series will be of great help for training and pattern discovery in the neural network.**. 
  
 **Example of week consumption time serie in Gramian Field Domain**
 
