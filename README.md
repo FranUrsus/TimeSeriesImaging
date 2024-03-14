@@ -55,13 +55,19 @@ This figure shows a time series of a  consumption centroid represented as a curv
 ### Modelling time series images for deep learning model training
 
 To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific  domain.
-**The proposed methodology will model each weekly consumption time series as an image in the Gramian Angular Field domain**. 
+**The proposed methodology models each 1D curve of each weekly time series as an RGB image in which the pixels of each channel are represented by the Gramian Angular Field Summation, difference and Markov transition transforms. The information that each of these models provides to the time series will be of great help for training and pattern discovery in the neural network. **. 
 
  Modelling a time series as a differential GRAM matrix allows to represent how different each value of the time series is with respect to the rest of the values of the series, as shown in the following example:
  
 **Example of week consumption time serie in Gramian Field Domain**
 
-![diff_t0](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/84e77093-755f-4cf6-9f66-d624d3c974d8)
+![Gram](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/3d31b8c4-bb44-4823-ac40-453414fc0a77)
+
+**Example of week consumption time serie in Markot Transition Domain**
+
+![markov](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/904adfe2-68e7-42ec-afdb-ca0786a86901)
+
+
 
 This type of images will be used by deep learning algorithms to train models capable of predicting the next day's hourly consumption based on weekly consumption. 
 
