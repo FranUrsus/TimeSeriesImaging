@@ -113,7 +113,7 @@ next_day_cluster_0 .. next_day_cluster_n
 
 **Split dataset in train and validation data**
 
-Once the weekly consumption RGB images (Gram matrices) are available, and organized in folders according to the class to which they belong (next day cluster), the data set is divided into validation and test as a previous step to the training of deep learning models.
+Once the weekly consumption three channels images are available and organized in folders according to the class to which they belong , the data set is splitted into validation and test as a previous step for the training of deep learning models.
 
 <img width="812" alt="Captura de pantalla 2024-02-28 a las 11 59 46" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ae430f38-3f32-48a4-8065-f36c517b9b15">
 
