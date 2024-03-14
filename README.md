@@ -80,7 +80,7 @@ This type of images will be used by deep learning algorithms to train models cap
 
 ### Deep learning
 
-  Deep leaning model will be trained by providing as inputs the weekly temporal series modelled as Gramian Angular Field as RGB images. The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
+  Deep leaning model will be trained by providing as inputs the weekly temporal series modelled as Gramian Angular Field Summation, difference, and Markov as RGB channel images. The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
 
 ### Input
 
