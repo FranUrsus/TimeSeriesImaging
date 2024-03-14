@@ -86,7 +86,9 @@ This type of images will be used by deep learning algorithms to train models cap
 
 The following figure shows an example of some weekly consumptions modelled using GRAM matrices, in which the difference between each value of a time series with the rest is plotted for each of the weekly time series.
 
-![test](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/01dec3a8-6ad4-42a1-a245-f599440ba393)
+![Gram](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/f4a2b5af-0e0f-4e9e-a5f0-46db4ba31662)
+
+![markov](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/62a38528-f94e-4945-9556-96bbf7e262e6)
 
 
 
