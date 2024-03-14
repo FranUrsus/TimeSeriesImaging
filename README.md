@@ -129,7 +129,7 @@ The proposed script implements a hypertuning search method for get the best mode
 ***(cambiar por la arquitectura del mejor modelo obtenido con hyperparameter tuning)***
 ![metodologia_DL_TS_forecasting](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/76c57d16-7202-4575-9f38-12ce379cdf58)
 
-The proposed deep learning architecture consists of a series of neurons connected along a series of convolution and reduction layers (pooling layers) finally connected to a fully connected neural network.
+The proposed deep learning architecture consists of a series of neurons connected along a series of convolution layers (pooling layers) finally connected to a fully connected neural network.
 
 The convolution operations allow the model to learn features from the images (the deeper the images, the more detail), and the reduction operations extract the relevant features and reduce the size of the neurons to speed up and enable the learning process.
 
