@@ -107,7 +107,9 @@ next_day_cluster_0 .. next_day_cluster_n
 
 <img width="553" alt="Captura de pantalla 2024-02-27 a las 16 45 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/02fd82e2-9907-4afb-b80e-327238b9a393">
 
-<img width="599" alt="Captura de pantalla 2024-02-27 a las 16 50 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0c62304c-c877-4479-8b69-cc162ff8394d">
+<img width="797" alt="Captura de pantalla 2024-03-14 a las 19 06 14" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/cefbb3d3-381b-4ec8-a4ef-31c21268d5cd">
+
+<img width="832" alt="Captura de pantalla 2024-03-14 a las 19 06 40" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0b6d9452-6c61-41f5-ac40-47c9170bebde">
 
 **Split dataset in train and validation data**
 
