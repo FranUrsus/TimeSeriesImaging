@@ -101,7 +101,7 @@ In this output example, the week consumption image with feed the deep learning m
 
 ### Data preparation for deep learning model training
 
-The Gramm matrix images of the weekly consumption time series will be stored in a folder with the name of the class they belong to (next day cluster).
+The Gramm Summation, Difference and Markov images channels for each weekly consumption time series will be stored in a folder with the name of the class they belong to (next day consumption cluster).
 
 next_day_cluster_0 .. next_day_cluster_n
 
