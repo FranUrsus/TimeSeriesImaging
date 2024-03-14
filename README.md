@@ -43,13 +43,16 @@ Time series can be modeled as 2D curves representing the value for each instant 
 
 This figure shows a time series of a user's weekly consumption represented as a curve.
 
-![this](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/76bcc5f3-e6df-49c7-b636-0c5b0e17c9ee)
+![curve](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0bbfee4a-c0ac-41f0-85af-a99da1a9755b)
+
 
 ### Consumption centroid
 
 This figure shows a time series of a  consumption centroid represented as a curve.
 
-<img width="657" alt="Captura de pantalla 2024-02-18 a las 14 02 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/88ecd86f-e984-4e7c-9d83-a5e93b323d59">
+<img width="387" alt="Captura de pantalla 2024-03-14 a las 15 50 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/19a32e90-89df-4b45-ae3a-5dcdfb44e4cc">
+
+
 
 
 ### Modelling time series images for deep learning model training
