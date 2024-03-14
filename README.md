@@ -129,7 +129,7 @@ The proposed script implements a hypertuning search method for get the best mode
 ***(cambiar por la arquitectura del mejor modelo obtenido con hyperparameter tuning)***
 ![metodologia_DL_TS_forecasting](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/76c57d16-7202-4575-9f38-12ce379cdf58)
 
-The proposed deep learning architecture consists of a series of neurons connected along a series of convolution layers (pooling layers) finally connected to a fully connected neural network.
+The deep learning model consists of a first phase in which a series of neurons (input image segmented into 3 channels) are connected to a number of convolution filters or kernels (neurons) through a series of convolution layers whose outputs will obtain as many feature maps as filters.  A series of pooling or reduction layers will be applied to these feature maps to reduce the size of the maps. Finally, the deep learning model connects a fully connected neural network with a softmax layer that will allow the predictions of the consumption cluster of the next day.
 
 The convolution operations allow the model to learn features from the images (the deeper the images, the more detail), and the reduction operations extract the relevant features and reduce the size of the neurons to speed up and enable the learning process.
 
@@ -137,10 +137,7 @@ For pooling (reduction), 2x2 kernels are used to halve the size of the neurons m
 
 All the output neurons that connect the kernels of the convolutional blocks with the inputs of the feature map neurons are connected to a relu function block.
 
-Each feature map goes through a 2x2 maxpooling block to halve its size.
-
 Finally the n-dimensional model is flattened and passed through 21 neurons to which the softmax function is applied to obtain the probability that the next day of consumption of the input weekly consumption image belongs to each of the 21 centroids.
-
 
 #### Predictions
 
