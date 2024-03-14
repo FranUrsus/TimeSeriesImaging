@@ -80,17 +80,11 @@ This type of images will be used by deep learning algorithms to train models cap
 
 ### Deep learning
 
-  Deep leaning model will be trained by providing as inputs the weekly temporal series modelled as Gramian Angular Field Summation, difference, and Markov as RGB channel images. The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
+  Deep leaning model will be trained by providing as inputs the three channels of images of weekly temporal series (Gramian Angular Field Summation, Gramian Angular difference, and Markov Transition). The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
 
 ### Input
 
-The following figure shows an example of some weekly consumptions modelled using GRAM matrices, in which the difference between each value of a time series with the rest is plotted for each of the weekly time series.
-
-![Gram](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/f4a2b5af-0e0f-4e9e-a5f0-46db4ba31662)
-
-![markov](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/62a38528-f94e-4945-9556-96bbf7e262e6)
-
-
+A sequence of week consumption (three channels images) - explained in time series imaging section-
 
 #### Output
 The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
