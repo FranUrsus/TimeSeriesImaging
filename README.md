@@ -86,9 +86,11 @@ This type of images will be used by deep learning algorithms to train models cap
 
 A sequence of week consumption (three channels images) - explained in time series imaging section-
 
-![249](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/caddf3a5-2e69-4308-b443-a6094fbdb480)
 
-![249_MK](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c5a7345e-3f7c-471d-b8e5-771f90b9bd14)
+![249_mk](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/387e570f-b61b-4d6f-a467-684d85b17a46)
+
+![249](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/edc652c8-7e09-4a97-94db-89068cc900d5)
+
 
 #### Output
 The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
