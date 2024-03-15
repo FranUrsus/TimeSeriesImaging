@@ -109,8 +109,7 @@ Next plot shows the number of images on each next_day consumption cluster:
 
 ![bla](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a9b5fd37-650c-4d79-9997-78410dd17fa6)
 
-
-The Gramm Summation, Difference and Markov images channels for each weekly consumption time series will be stored in a folder with the name of the class they belong to (next day consumption cluster).
+Next figures shows examples of Markov, Grammian Angular Summation, and Gramian Angular Difference images obtained from weekly consumptions. 
 
 next_day_cluster_0 .. next_day_cluster_n
 
