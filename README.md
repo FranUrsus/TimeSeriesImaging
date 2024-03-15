@@ -71,12 +71,9 @@ To obtain better results in training models based on time series images with dee
 
 A Markov transition matrix models the transition probabilities for a time series. You can see an example in the following figure.
 
-
 ![249_mk](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a4f99004-66d0-4ed9-9336-edea70e148c8)
 
-
-
-This type of images will be used by deep learning algorithms to train models capable of predicting the next day's hourly consumption based on weekly consumption. 
+These images will be used by deep learning algorithms to train models capable of predicting the next day's hourly consumption based on weekly consumption. 
 
 ### Deep learning
 
