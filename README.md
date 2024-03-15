@@ -95,10 +95,10 @@ A sequence of week consumption (three channels images) - explained in time serie
 
 The output of the model will be a soft layer with one neuron for each possible value of the predicted next day consumption cluster. 
 
-<img width="386" alt="Captura de pantalla 2024-02-28 a las 12 17 19" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9d092ac6-a684-4f3e-aa7e-db2a2ece4e15">
 
 ### Data preparation for deep learning model training
 
+<img width="408" alt="Captura de pantalla 2024-03-15 a las 17 08 06" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c2f17d24-ca28-4aba-8e4c-ed89a921d8b8">
 
 **Split dataset in train and validation data**
 
