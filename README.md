@@ -64,7 +64,7 @@ To obtain better results in training models based on time series images with dee
 
  Modelling a time series as a differential GRAM matrix allows to represent how different each value of the time series is with respect to the rest of the values of the series, as shown in the following example:
 
-![Gram](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/3d31b8c4-bb44-4823-ac40-453414fc0a77)
+![249](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/93e7a5e2-dd9e-4349-b817-d966c440ff6a)
 
 
 **Example of week consumption time serie in Markot Transition Domain**
@@ -72,7 +72,7 @@ To obtain better results in training models based on time series images with dee
 A Markov transition matrix models the transition probabilities for a time series. You can see an example in the following figure.
 
 
-![markov](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/904adfe2-68e7-42ec-afdb-ca0786a86901)
+![249_mk](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a4f99004-66d0-4ed9-9336-edea70e148c8)
 
 
 
