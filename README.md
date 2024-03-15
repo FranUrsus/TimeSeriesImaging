@@ -109,9 +109,7 @@ Next plot shows the number of images on each next_day consumption cluster:
 
 ![bla](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a9b5fd37-650c-4d79-9997-78410dd17fa6)
 
-Next figures shows examples of Markov, Grammian Angular Summation, and Gramian Angular Difference images obtained from weekly consumptions. 
-
-next_day_cluster_0 .. next_day_cluster_n
+The following images show examples of weekly time series of electricity consumption modelled as Gramian and Markov images and whose next day's consumption belongs to cluster 5.
 
 <img width="797" alt="Captura de pantalla 2024-03-14 a las 19 06 14" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/cefbb3d3-381b-4ec8-a4ef-31c21268d5cd">
 
