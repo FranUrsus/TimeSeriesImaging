@@ -92,11 +92,8 @@ A sequence of week consumption (three channels images) - explained in time serie
 
 
 #### Output
-The output of the network will be a one hot encoding vector that will have a value of 1 in the neuron that activates the predicted consumption cluster for the next day. The rest of the unselected clusters will remain at 0.
 
-In this output example, the week consumption image with feed the deep learning model activates the first output neurons (cluster 0 next day consumption will be predicted)
-
-**one_hot_encoding_output** = [1,0,0,0,0,0,0,0,0,...0]
+The output of the model will be a soft layer with one neuron for each possible value of the predicted next day consumption cluster. 
 
 <img width="386" alt="Captura de pantalla 2024-02-28 a las 12 17 19" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9d092ac6-a684-4f3e-aa7e-db2a2ece4e15">
 
