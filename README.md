@@ -107,7 +107,7 @@ To avoid overtraining and to be able to evaluate the performance of the deep lea
 
 Next plot shows the number of images on each next_day consumption cluster:
 
-![cluster_split](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/7589c90c-9152-4052-a1ac-acdfa7f296b4)
+![cluster_split](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/bf0bf877-3459-4d3e-b3b3-d2f22b44d488)
 
 
 The Gramm Summation, Difference and Markov images channels for each weekly consumption time series will be stored in a folder with the name of the class they belong to (next day consumption cluster).
