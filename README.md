@@ -32,6 +32,13 @@ After balancing, the weekly consumption assigned to clusters 20,4,1,7,18,2 has b
 <img width="383" alt="Captura de pantalla 2024-03-17 a las 10 34 28" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/51055cd1-ee01-4e3e-ad65-3ece8ec2f024">
 <img width="474" alt="Captura de pantalla 2024-03-17 a las 10 34 22" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/f26ac5e4-5161-4ce7-8d3c-4e8c5aeaa2c1">
 
+This cut-off value has been used after analyzing the data set and seeing that below that value there are very few weekly consumption observations.
+
+<img width="389" alt="Captura de pantalla 2024-03-17 a las 10 23 17" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/df441020-4ddd-46b6-bb81-099899fd92b6">
+
+After balancing, the total data set is left with **10,005 weekly consumption observations** spread equally across 15 consumption clusters for the next day.
+
+
 
 
 > **_NOTE:_** This script does not prepare the data as described.
