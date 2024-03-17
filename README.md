@@ -15,7 +15,9 @@ The proposed methodology consists of 3 phases:
 - **Time series imaging**. Transformation of time series into 2D images suitable for training models with deep learning. 
 - **Training of Deep learning models:** Use deep learning algorithms to obtain models capable of predicting the next day's consumption from 2D images of weekly time series.
 
-## Data preparation (Deep Learning with imaging time series)
+## Data preparation 
+
+### Deep Learning with imaging time series)
   
   The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day. This model will be available for free and will be detailed as below.
 
@@ -38,6 +40,11 @@ This cut-off value has been used after analyzing the data set and seeing that be
 
 After balancing, the total data set is left with **10,005 weekly consumption observations** spread equally across 15 consumption clusters for the next day.
 
+### Deep Learning with imaging time series
+
+To train deep learning models with LSTM neural networks, the data has been prepared in such a way that after each weekly consumption row (168 consumption values) the daily consumption (24 values) of the next day's consumption is attached. In this way, the rows represent consecutive weekly consumptions of different users and the next day's consumption for each of these weekly consumptions.
+
+<img width="809" alt="Captura de pantalla 2024-03-17 a las 10 57 07" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a8ce4644-f8f4-4e23-8d7f-e9de8b88da65">
 
 
 
