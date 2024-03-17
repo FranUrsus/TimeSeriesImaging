@@ -133,9 +133,12 @@ Next plot shows the number of images on each next_day consumption cluster:
 
 ![cluster_obs](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/db03eb8b-9e5b-415e-84b3-5788c26fc63d)
 
-The following images show examples of two weekly time series of electricity consumption modelled as Gramian and Markov images and whose next day's consumption belongs to cluster 15.
+The following images show examples of two weekly time series of electricity consumption modelled as Gramian and Markov images and whose next day's consumption belongs to clusters 15 and 13.
 
 <img width="621" alt="Captura de pantalla 2024-03-17 a las 11 31 20" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/eca7467f-0747-42e5-a8c5-cec57df46075">
+
+<img width="624" alt="Captura de pantalla 2024-03-17 a las 11 35 01" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/b8f62bba-24a8-421a-826f-a370f7b780ef">
+
 
 
 ### Deep learning process
