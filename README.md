@@ -25,7 +25,8 @@ This figure shows what the data must look like in order to be processed by the s
 
 In the example that will be used to describe the methodology, a data set with 150724 consecutive weekly consumptions of multiple consumer has been used.
 
-Due to the size of the dataset, the consecutive weekly consumptions of the first 10 consumers have been selected. (A total of 5223 weekly consumption rows has been obtained)
+For the methodology based on deep learning with time series images, weekly consumption observations assigned to very infrequent clusters have been eliminated. In this way, the aim is to reduce the error and improve the learning quality of the models. The data set has been balanced so that there is an adequate minimum number of observations in the different consumption clusters for the next day.
+
 
 > **_NOTE:_** This script does not prepare the data as described.
 
