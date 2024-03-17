@@ -27,6 +27,12 @@ In the example that will be used to describe the methodology, a data set with 15
 
 For the methodology based on deep learning with time series images, weekly consumption observations assigned to very infrequent clusters have been eliminated. In this way, the aim is to reduce the error and improve the learning quality of the models. The data set has been balanced so that there is an adequate minimum number of observations in the different consumption clusters for the next day.
 
+After balancing, the weekly consumption assigned to clusters 20,4,1,7,18,2 has been eliminated, due to the low frequency. Finally, the possible consumption clusters for the next day are: [0,3,5,6,8,9,10,11,12,13,14,15,16,17,19]
+
+<img width="383" alt="Captura de pantalla 2024-03-17 a las 10 34 28" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/51055cd1-ee01-4e3e-ad65-3ece8ec2f024">
+<img width="474" alt="Captura de pantalla 2024-03-17 a las 10 34 22" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/f26ac5e4-5161-4ce7-8d3c-4e8c5aeaa2c1">
+
+
 
 > **_NOTE:_** This script does not prepare the data as described.
 
