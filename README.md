@@ -17,7 +17,7 @@ The proposed methodology consists of 3 phases:
 
 ## Data preparation 
 
-### Deep Learning with imaging time series)
+### Deep Learning with imaging time series
   
   The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day. This model will be available for free and will be detailed as below.
 
@@ -40,7 +40,7 @@ This cut-off value has been used after analyzing the data set and seeing that be
 
 After balancing, the total data set is left with **10,005 weekly consumption observations** spread equally across 15 consumption clusters for the next day.
 
-### Deep Learning with imaging time series
+### Deep Learning with LSTM
 
 To train deep learning models with LSTM neural networks, the data has been prepared in such a way that after each weekly consumption row (168 consumption values) the daily consumption (24 values) of the next day's consumption is attached. In this way, the rows represent consecutive weekly consumptions of different users and the next day's consumption for each of these weekly consumptions.
 
