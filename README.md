@@ -112,11 +112,6 @@ The input to the deep learning algorithms will be a 4-dimensional n-dimensional 
 #### Output
 
 
-The first step consists of encoding each of the classes of each observation of the training and validation set with an array that will be assigned the value 1 in the cluster to which the weekly consumption belongs and zeros for the rest of the clusters.
-
-<img width="974" alt="Captura de pantalla 2024-03-17 a las 16 56 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c60c62d9-d3d0-40c6-be1c-abc4bd4ae0b0">
-
-
 The output of the model will be a soft layer connected on each fully connected layer neurons to evaluate  the predicted next day consumption cluster. 
 
 <img width="408" alt="Captura de pantalla 2024-03-15 a las 17 08 06" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c2f17d24-ca28-4aba-8e4c-ed89a921d8b8">
@@ -142,9 +137,19 @@ The following images show examples of two weekly time series of electricity cons
 
 <img width="624" alt="Captura de pantalla 2024-03-17 a las 11 35 01" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/b8f62bba-24a8-421a-826f-a370f7b780ef">
 
+***Input***
+
 At this point, we would already have the input data prepared with the images for each of the three channels corresponding to each weekly consumption for the deep learning algorithms.
 
 <img width="1054" alt="Captura de pantalla 2024-03-17 a las 11 50 05" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1533d75d-061f-455e-b16f-483d3864fe50">
+
+***Output***
+
+The first step consists of encoding each of the classes of each observation of the training and validation set with an array that will be assigned the value 1 in the cluster to which the weekly consumption belongs and zeros for the rest of the clusters.
+
+<img width="974" alt="Captura de pantalla 2024-03-17 a las 16 56 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c60c62d9-d3d0-40c6-be1c-abc4bd4ae0b0">
+
+
 
 
 
