@@ -1,4 +1,4 @@
- #  Deep learning and time series imaging for the next day electricity consumption forecasts
+ #  Deep learning, LSTM and time series imaging for the next day electricity consumption forecasts
 
 ![ESQUEMA_TS](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/21d83c21-d242-4bbe-9aa1-fc5a7a7ead97)
 
@@ -15,7 +15,7 @@ The proposed methodology consists of 3 phases:
 - **Time series imaging**. Transformation of time series into 2D images suitable for training models with deep learning. 
 - **Training of Deep learning models:** Use deep learning algorithms to obtain models capable of predicting the next day's consumption from 2D images of weekly time series.
 
-## Data preparation
+## Data preparation (Deep Learning with imaging time series)
   
   The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day. This model will be available for free and will be detailed as below.
 
