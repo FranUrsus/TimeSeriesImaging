@@ -9,6 +9,12 @@ import tensorflow as tf
 
 import keras_tuner as kt
 
+from sklearn import preprocessing
+
+from keras.layers import *
+from keras.models import Sequential
+from keras.applications.resnet50 import ResNet50
+
 
 class DeepLearning:
 
@@ -16,7 +22,9 @@ class DeepLearning:
                  img_width,
                  img_height,
                  img_channels,
-                 epochs=100):
+                 num_classes,
+                 epochs=100,
+                 ):
         # images
         self.input_shape = (img_width, img_height, img_channels)
         self.img_width = img_width
@@ -27,7 +35,7 @@ class DeepLearning:
         self.train_ds = None
 
         # classes
-        self.num_classes = None
+        self.num_classes = num_classes
         self.class_names = None
 
         # model
@@ -47,6 +55,7 @@ class DeepLearning:
         self.tuner = None
 
     # split dataset in train and test for supervised learning process
+    # is valid only is images is classified on folder class structure
     def split_train_and_test(self, dataset_url, batch_size=32):
         data_dir = pathlib.Path(dataset_url)
 
@@ -75,7 +84,7 @@ class DeepLearning:
 
     # to avoid model over-training
     def get_early_stopping(self):
-        early_stopping = tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=5)
+        early_stopping = tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=3)
         self.early_stopping = early_stopping
         return early_stopping
 
@@ -127,33 +136,23 @@ class DeepLearning:
         model.add(Input(shape=self.input_shape))
 
         # rescaling images pixel values on channels in [0,1] range
-        model.add(Rescaling(1. / 255.)),
+        #model.add(Rescaling(1. / 255.)),
 
         # First conv-pooling
-        model.add(Conv2D(hp.Int("conv_1", min_value=64, max_value=64, step=32),
-                         kernel_size=(3, 3),
-                         activation='relu'))
+        model.add(Conv2D(hp.Int("conv_1", min_value=32, max_value=64, step=32),
+                         kernel_size=3,
+                         activation='softmax'))
+        model.add(Dropout(0.2))
         model.add(MaxPooling2D(pool_size=(2, 2)))
 
         # Second conv-pooling
-        model.add(Conv2D(hp.Int("conv_2", min_value=32, max_value=32, step=32),
-                         kernel_size=(3, 3),
-                         activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-
-        # Third conv-pooling
-        model.add(Conv2D(
-            hp.Int("conv_3", min_value=32, max_value=128, step=32),
-            kernel_size=(3, 3),
-            activation='relu'))
+        model.add(Conv2D(hp.Int("conv_2", min_value=16, max_value=32, step=16),
+                         kernel_size=3,
+                         activation='softmax'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
 
         # fully connected layer
         model.add(Flatten())
-        model.add(Dense(hp.Int('dense_units', min_value=256,
-                        max_value=768,
-                        step=256),
-                        activation='relu'))
 
         model.add(Dense(self.num_classes, activation='softmax'))
 
