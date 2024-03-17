@@ -111,6 +111,12 @@ The input to the deep learning algorithms will be a 4-dimensional n-dimensional 
 
 #### Output
 
+
+The first step consists of encoding each of the classes of each observation of the training and validation set with an array that will be assigned the value 1 in the cluster to which the weekly consumption belongs and zeros for the rest of the clusters.
+
+<img width="974" alt="Captura de pantalla 2024-03-17 a las 16 56 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c60c62d9-d3d0-40c6-be1c-abc4bd4ae0b0">
+
+
 The output of the model will be a soft layer connected on each fully connected layer neurons to evaluate  the predicted next day consumption cluster. 
 
 <img width="408" alt="Captura de pantalla 2024-03-15 a las 17 08 06" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c2f17d24-ca28-4aba-8e4c-ed89a921d8b8">
