@@ -104,12 +104,15 @@ These images will be used by deep learning algorithms to train models capable of
 
 ### Input
 
-A sequence of week consumption (three channels images) - explained in time series imaging section-
+The input to the deep learning algorithms will be a 4-dimensional n-dimensional array data structure detailed in the following figure.
 
+<img width="693" alt="Captura de pantalla 2024-03-17 a las 14 51 34" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/3e9b7a94-8042-4d02-8ff4-513f897e62cf">
 
 ![249_mk](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/387e570f-b61b-4d6f-a467-684d85b17a46)
 
 ![249](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/edc652c8-7e09-4a97-94db-89068cc900d5)
+
+
 
 
 #### Output
