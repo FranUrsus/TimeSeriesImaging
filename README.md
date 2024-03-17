@@ -131,7 +131,7 @@ To avoid overtraining and to be able to evaluate the performance of the deep lea
 
 Next plot shows the number of images on each next_day consumption cluster:
 
-![bla](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a9b5fd37-650c-4d79-9997-78410dd17fa6)
+![cluster_obs](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/db03eb8b-9e5b-415e-84b3-5788c26fc63d)
 
 The following images show examples of weekly time series of electricity consumption modelled as Gramian and Markov images and whose next day's consumption belongs to cluster 5.
 
