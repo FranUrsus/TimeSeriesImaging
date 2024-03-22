@@ -153,7 +153,7 @@ At this point, we would already have the input data prepared with the images for
 <img width="211" alt="Captura de pantalla 2024-03-22 a las 13 28 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/43f0621d-cdc4-40a9-854a-1efbfb8e1491">
 
 
-***Output***
+***Labels***
 
 The first step consists of encoding each of the classes of each observation of the training and validation set with an array that will be assigned the value 1 in the cluster to which the weekly consumption belongs and zeros for the rest of the clusters.
 
