@@ -144,7 +144,11 @@ The following images show examples of two weekly time series of electricity cons
 
 At this point, we would already have the input data prepared with the images for each of the three channels corresponding to each weekly consumption for the deep learning algorithms.
 
-<img width="1054" alt="Captura de pantalla 2024-03-17 a las 11 50 05" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/1533d75d-061f-455e-b16f-483d3864fe50">
+<img width="216" alt="Captura de pantalla 2024-03-22 a las 13 26 47" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/6996ba1e-2e2d-48e9-a70a-e650bcb98664">
+
+<img width="211" alt="Captura de pantalla 2024-03-22 a las 13 28 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/43f0621d-cdc4-40a9-854a-1efbfb8e1491">
+
+
 
 ***Output***
 
