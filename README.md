@@ -106,8 +106,7 @@ These images will be used by deep learning algorithms to train models capable of
 
 The input to the deep learning algorithms will be a 4-dimensional n-dimensional array data structure detailed in the following figure for the x-values and one hot encoding class laber for y-values.
 
-<img width="693" alt="Captura de pantalla 2024-03-17 a las 14 51 34" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/e5b40591-3d98-45b8-829f-320af4b06e5b">
-
+<img width="708" alt="Captura de pantalla 2024-03-22 a las 13 50 14" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/cfeeee01-b733-426f-bd72-d20ddbc941f7">
 
 #### Output
 
