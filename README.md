@@ -106,13 +106,7 @@ These images will be used by deep learning algorithms to train models capable of
 
 The input to the deep learning algorithms will be a 4-dimensional n-dimensional array data structure detailed in the following figure for the x-values and one hot encoding class laber for y-values.
 
-***Label_train***
-
-<img width="885" alt="Captura de pantalla 2024-03-22 a las 13 34 17" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9ec7d8c2-5c2b-48af-9353-dc123ea580f4">
-
-***Label_validation***
-<img width="882" alt="Captura de pantalla 2024-03-22 a las 13 35 46" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/e04f9b2e-c655-4962-8df6-2a6f1f6e9c6a">
-
+<img width="693" alt="Captura de pantalla 2024-03-17 a las 14 51 34" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/e5b40591-3d98-45b8-829f-320af4b06e5b">
 
 
 #### Output
@@ -162,7 +156,13 @@ At this point, we would already have the input data prepared with the images for
 
 The first step consists of encoding each of the classes of each observation of the training and validation set with an array that will be assigned the value 1 in the cluster to which the weekly consumption belongs and zeros for the rest of the clusters.
 
-<img width="974" alt="Captura de pantalla 2024-03-17 a las 16 56 55" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c60c62d9-d3d0-40c6-be1c-abc4bd4ae0b0">
+***Label_train***
+
+<img width="885" alt="Captura de pantalla 2024-03-22 a las 13 34 17" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9ec7d8c2-5c2b-48af-9353-dc123ea580f4">
+
+***Label_validation***
+<img width="882" alt="Captura de pantalla 2024-03-22 a las 13 35 46" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/e04f9b2e-c655-4962-8df6-2a6f1f6e9c6a">
+
 
 
 
