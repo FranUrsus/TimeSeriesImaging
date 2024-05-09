@@ -1,4 +1,5 @@
 from keras.models import Sequential
+
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Input, Dropout
 from tensorflow.keras.layers import Rescaling
 from tensorflow.keras.optimizers import Adam
@@ -23,12 +24,20 @@ class DeepLearning:
                  img_height,
                  img_channels,
                  num_classes,
-                 epochs=100,
+                 class_names="names",
+                 epochs=10,
+                 batch_size=32
                  ):
         # images
+        self.data_augmentation = None
+        self.batch_size = batch_size
+        self.test_ds = None
+        self.class_names = class_names
         self.input_shape = (img_width, img_height, img_channels)
         self.img_width = img_width
         self.img_height = img_height
+
+        self.img_channels = img_channels
 
         # dataset validation and train
         self.val_ds = None
@@ -54,27 +63,27 @@ class DeepLearning:
         # tuner
         self.tuner = None
 
-    # split dataset in train and test for supervised learning process
+    # Split dataset in train and test for supervised learning process
     # is valid only is images is classified on folder class structure
     def split_train_and_test(self, dataset_url, batch_size=32):
         data_dir = pathlib.Path(dataset_url)
 
         self.train_ds = tf.keras.utils.image_dataset_from_directory(
             data_dir,
-            validation_split=0.1,
+            validation_split=0.3,
             subset="training",
             seed=123,
-            labels='inferred',
+            color_mode='rgb',
             label_mode="categorical",
             image_size=(self.img_height, self.img_width),
             batch_size=batch_size)
 
         self.val_ds = tf.keras.utils.image_dataset_from_directory(
             data_dir,
-            validation_split=0.1,
+            validation_split=0.3,
             subset="validation",
             label_mode="categorical",
-            labels='inferred',
+            color_mode='rgb',
             seed=123,
             image_size=(self.img_height, self.img_width),
             batch_size=batch_size)
@@ -82,9 +91,9 @@ class DeepLearning:
         self.class_names = self.train_ds.class_names
         self.num_classes = len(self.class_names)
 
-    # to avoid model over-training
     def get_early_stopping(self):
-        early_stopping = tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=3)
+        early_stopping = tf.keras.callbacks.EarlyStopping(monitor="val_loss",
+                                                          patience=3)
         self.early_stopping = early_stopping
         return early_stopping
 
@@ -127,46 +136,35 @@ class DeepLearning:
         print('Best epoch: %d' % (best_epoch,))
         self.best_epoch = best_epoch
 
-    # build deep learning model generator based on hyperparameter tuning
-    def model_builder(self, hp):
-        # create deep learning sequential model
-        model = keras.Sequential()
+    def init_data_augmentation(self):
+        data_augmentation = tf.keras.Sequential(
+            [
+                tf.keras.layers.RandomFlip("horizontal", input_shape=(self.img_height, self.img_width, 3)),
+                tf.keras.layers.RandomRotation(0.1),
+                tf.keras.layers.RandomZoom(0.1),
+                tf.keras.layers.RandomContrast(factor=(0.8, 1.4))
+            ]
+        )
+        self.data_augmentation = data_augmentation
 
-        # set image input shape for deep learning process
-        model.add(Input(shape=self.input_shape))
+    def random_augmented_images(self):
+        class_names = self.train_ds.class_names
+        plt.figure(figsize=(10, 10))
+        for images, labels in self.train_ds.take(1):
+            for i in range(9):
+                augmented_images = self.data_augmentation(images)
+                ax = plt.subplot(3, 3, i + 1)
+                plt.imshow(augmented_images[i].numpy().astype("uint8"))
+                # plt.title(class_names[labels[i]])
+                plt.axis("off")
 
-        # rescaling images pixel values on channels in [0,1] range
-        #model.add(Rescaling(1. / 255.)),
-
-        # First conv-pooling
-        model.add(Conv2D(hp.Int("conv_1", min_value=32, max_value=64, step=32),
-                         kernel_size=3,
-                         activation='softmax'))
-        model.add(Dropout(0.2))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-
-        # Second conv-pooling
-        model.add(Conv2D(hp.Int("conv_2", min_value=16, max_value=32, step=16),
-                         kernel_size=3,
-                         activation='softmax'))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-
-        # fully connected layer
-        model.add(Flatten())
-
-        model.add(Dense(self.num_classes, activation='softmax'))
-
-        # Tune the learning rate for the optimizer
-        # Choose an optimal value from 0.01, 0.001, or 0.0001
-
-        lr = hp.Choice("learning_rate",
-                       values=[1e-1, 1e-2, 1e-3])
-        opt = Adam(lr)
-
-        model.compile(optimizer=opt,
-                      loss="categorical_crossentropy",
-                      metrics=["accuracy"])
-
-        self.model = model
-
-        return model
+    def random_augmented_images_m3(self,images):
+        class_names = self.train_ds.class_names
+        plt.figure(figsize=(10, 10))
+        for image in images:
+            for i in range(9):
+                augmented_images = self.data_augmentation(image)
+                ax = plt.subplot(3, 3, i + 1)
+                plt.imshow(augmented_images[i].numpy().astype("uint8"))
+                # plt.title(class_names[labels[i]])
+                plt.axis("off")
