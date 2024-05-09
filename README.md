@@ -26,24 +26,21 @@ The proposed methodology consists of 3 phases:
 
 - In each row there will be 24x24 values ​​for the hourly consumption of 24 days, and the 24 consumption values ​​for the following day. (600 columns)
 
+- Split consumers into train, validation and test.
+
+
 
 ## Time series imaging
 
-Time series can be modeled as 2D curves representing the value for each instant in the time series, but this way of modelling time series is not the most suitable for training models with deep learning algorithms to make predictions from time series images.
+The proposed methodology generates 3 different images from each row of the dataset described above.
 
-### Week consumption
+- The first image (consumption image) (24x24) represents the hourly consumption for each of the 24 days
 
-This figure shows a time series of a user's weekly consumption represented as a curve.
+- The second image (months image) (24x24) reflects the information of the month to which each hour of consumption belongs
 
-![curve](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0bbfee4a-c0ac-41f0-85af-a99da1a9755b)
+- The third image models the day (day of the week) (24x24) of the week to which each hour of consumption belongs
 
-
-### Consumption centroid
-
-This figure shows a time series of a  consumption centroid represented as a curve.
-
-<img width="387" alt="Captura de pantalla 2024-03-14 a las 15 50 08" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/19a32e90-89df-4b45-ae3a-5dcdfb44e4cc">
-
+  <img width="931" alt="Captura de pantalla 2024-05-09 a las 21 16 45" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a73fafea-f417-495f-bea2-825e3215b7bc">
 
 
 ### Modelling time series images for deep learning model training
