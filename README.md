@@ -12,52 +12,20 @@ This script implements a methodology that combines ***deep learning***, ***and t
 
 The proposed methodology consists of 3 phases:
 
-- **Data preparation**. Prepare the data accordingly to apply the methodology
-- **Time series imaging**. Transformation of time series into 2D images suitable for training models with deep learning. 
-- **Training of Deep learning models:** Use deep learning algorithms to obtain models capable of predicting the next day's consumption from 2D images of weekly time series.
+- **Data preparation**.Data preparation for model training
+- **Time series imaging**. Image generation from time series data
+- **Training of Deep learning models:** Use deep learning algorithms to obtain models for next day hourly consumption forecasting using obtained imaged from time series .
 
 ## Data preparation 
 
-### Deep Learning with imaging time series
-  
-  The first step consists of preparing a dataset in which each row represents the weekly hourly consumption (24x7) of any user and the cluster (cluster_ next_day) that best represents the next day's (24 hours) consumption for that user. This cluster is assigned by applying a clustering model to the 24 hours of consumption of the next day. This model will be available for free and will be detailed as below in clustering model centroids section.
+- For each user, get the maximum number of consecutive days of consumption. (24 time values ​​on each row). Each row will contain the 24 consumption values ​​of the day following the previous row.
 
-This figure shows what the data must look like in order to be processed by the script:
+- In each row, add the 24 hourly consumption values ​​for the 23 consecutive days.
 
-<img width="1008" alt="Captura de pantalla 2024-02-19 a las 19 03 33" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/c85737ec-c687-4f9b-bc32-c5b6d673bf31">
+- Finally, add to the end of each row, the 24 hourly consumption values ​​of the 25th.
 
-In the example that will be used to describe the methodology, a data set with 150724 consecutive weekly consumptions of multiple consumer has been used.
+- In each row there will be 24x24 values ​​for the hourly consumption of 24 days, and the 24 consumption values ​​for the following day. (600 columns)
 
-For the methodology based on deep learning with time series images, weekly consumption observations assigned to very infrequent clusters have been eliminated. In this way, the aim is to reduce the error and improve the learning quality of the models. The data set has been balanced so that there is an adequate minimum number of observations in the different consumption clusters for the next day.
-
-After balancing, the weekly consumption assigned to clusters 20,4,1,7,18,2 has been eliminated, due to the low frequency. Finally, the possible consumption clusters for the next day are: [0,3,5,6,8,9,10,11,12,13,14,15,16,17,19]
-
-<img width="383" alt="Captura de pantalla 2024-03-17 a las 10 34 28" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/51055cd1-ee01-4e3e-ad65-3ece8ec2f024">
-<img width="474" alt="Captura de pantalla 2024-03-17 a las 10 34 22" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/f26ac5e4-5161-4ce7-8d3c-4e8c5aeaa2c1">
-
-This cut-off value has been used after analyzing the data set and seeing that below that value there are very few weekly consumption observations.
-
-<img width="389" alt="Captura de pantalla 2024-03-17 a las 10 23 17" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/df441020-4ddd-46b6-bb81-099899fd92b6">
-
-After balancing, the total data set is left with **10,005 weekly consumption observations** spread equally across 15 consumption clusters for the next day.
-
-### Deep Learning with LSTM
-
-To train deep learning models with LSTM neural networks, the data has been prepared in such a way that after each weekly consumption row (168 consumption values) the daily consumption (24 values) of the next day's consumption is attached. In this way, the rows represent consecutive weekly consumptions of different users and the next day's consumption for each of these weekly consumptions.
-
-<img width="809" alt="Captura de pantalla 2024-03-17 a las 10 57 07" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a8ce4644-f8f4-4e23-8d7f-e9de8b88da65">
-
-
-
-> **_NOTE:_** This script does not prepare the data as described.
-
-## Clustering model centroids
-
-The centroids of the model that has been used to assign the next day's cluster to each weekly consumption are as follows:
-
-<img width="727" alt="centroids" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d6e7827a-af06-4bf9-9f90-20e59d5a4962">
-
-This model is available for free in model folder.
 
 ## Time series imaging
 
