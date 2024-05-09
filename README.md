@@ -40,31 +40,18 @@ The proposed methodology generates 3 different images from each row of the datas
 
 - The third image models the day (day of the week) (24x24) of the week to which each hour of consumption belongs
 
-  <img width="931" alt="Captura de pantalla 2024-05-09 a las 21 16 45" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a73fafea-f417-495f-bea2-825e3215b7bc">
+ <img width="995" alt="Captura de pantalla 2024-05-09 a las 21 22 45" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/b0df8fe5-9052-4530-a286-4d8455d2e571">
 
 
-### Modelling time series images for deep learning model training
 
-To obtain better results in training models based on time series images with deep learning techniques, the time series instead of being modelled as curves (shown above), can be modelled by applying a series of transformations that generate a 2D representation in a specific  domain.
+**Data normalization** 
 
-**The proposed methodology models each 1D curve of each weekly time series as an three channel image in which the pixels of each channel are represented by the Gramian Angular Field Summation and difference and the Markov transition models. The information that each of these models provides to the time series will be of great help for training and pattern discovery in the neural network.**. 
- 
-**Example of week consumption time serie in Gramian Field Domain**
-
- Modelling a time series as a differential GRAM matrix allows to represent how different each value of the time series is with respect to the rest of the values of the series, as shown in the following example:
-
-![249](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/93e7a5e2-dd9e-4349-b817-d966c440ff6a)
+The hourly values ​​for each of the 3 images have been normalized between 0 and 1. For the consumption image, they have been normalized between the highest and lowest consumption of all users. For the images of day of the month and day of the week associated with each consumption schedule, it has been divided by 10.
 
 
-**Example of week consumption time serie in Markot Transition Domain**
 
-A Markov transition matrix models the transition probabilities for a time series. You can see an example in the following figure.
 
-![249_mk](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a4f99004-66d0-4ed9-9336-edea70e148c8)
-
-These images will be used by deep learning algorithms to train models capable of predicting the next day's hourly consumption based on weekly consumption. 
-
-### Deep learning
+### Deep learning. (Modeling)
 
   Deep leaning model will be trained by providing as inputs the three channels of images of weekly temporal series (Gramian Angular Field Summation, Gramian Angular difference, and Markov Transition). The neural netorks outputs will be the corresponding label for the consumption cluster for next day.
 
