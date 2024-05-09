@@ -2,7 +2,6 @@
 
 <img width="863" alt="Captura de pantalla 2024-05-09 a las 20 49 50" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/d258f9a2-7334-42f7-9113-1ba097dcf649">
 
-
 <!---**Alternative 2**
 
 
@@ -63,12 +62,12 @@ A custom deep learning architecture will be created from scratch. This backbone 
 <img width="863" alt="Captura de pantalla 2024-05-09 a las 20 49 50" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/378d229a-4ab0-400d-84a7-773e82e1788c">
 
 
-
 ## Authors ✒️
 
 * **Francisco Rodríguez Gómez** 
 * **José del Campo Ávila** 
-* **Llanos Mora López** 
+* **Llanos Mora López**
+* **Ezequiel López Rubio**
 
 ## License 📄
 
