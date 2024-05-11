@@ -35,9 +35,9 @@ The proposed methodology generates 3 different images from each row of the datas
 
 - The first image (consumption image) (24x24) represents the hourly consumption for each of the 24 days
 
-- The second image (months image) (24x24) reflects the information of the month to which each hour of consumption belongs
+- The second image (day of year image) (24x24) model the information about the month for each hour of consumption 
 
-- The third image models the day (day of the week) (24x24) of the week to which each hour of consumption belongs
+- The third image models the day (day of the week) (24x24) of the week for each consumprion hour
 
 
 <img width="776" alt="Captura de pantalla 2024-05-11 a las 21 55 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/870105aa-10a4-4417-a6e0-b6c584f4b873">
