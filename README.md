@@ -39,8 +39,8 @@ The proposed methodology generates 3 different images from each row of the datas
 
 - The third image models the day (day of the week) (24x24) of the week to which each hour of consumption belongs
 
-![Uploading Captura de pantalla 2024-05-11 a las 21.55.44.png…]()
 
+<img width="776" alt="Captura de pantalla 2024-05-11 a las 21 55 44" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/870105aa-10a4-4417-a6e0-b6c584f4b873">
 
 
 **Data normalization** 
