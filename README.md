@@ -29,6 +29,12 @@ The proposed methodology consists of 3 phases:
 
 - Reserve for the test set (on test consumers) days later in time than the days used for training and validation.
 
+- Each day of the month value is modeled cyclically as follows
+  
+<img width="457" alt="Captura de pantalla 2024-05-26 a las 16 30 57" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a7411a06-3b07-42fa-80d6-12467066c373">
+
+- The same methodology has been applied for each day of year x [0-181] ->X, x[182 || 183 ||184]->182, x[x>184] = abs(365-x)+1 
+
 
 
 ## Time series imaging
@@ -47,7 +53,7 @@ The proposed methodology generates 3 different images from each row of the datas
 
 **Data normalization** 
 
-The hourly values ​​for each of the 3 images have been normalized between 0 and 1. For the consumption image, they have been normalized between the highest and lowest consumption of all users. For the images of day of the month and day of the week associated with each consumption schedule, it has been divided by 10.
+The hourly values ​​for each of the 3 images have been normalized between 0 and 1. For the consumption image, they have been normalized between the highest and lowest consumption of all users. For the images of day of the year and day of the week  
 
 
 ### Deep learning. (Modeling)
