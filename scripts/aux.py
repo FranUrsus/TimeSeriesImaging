@@ -4,8 +4,6 @@ import os
 from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
-from imblearn.combine import SMOTETomek
-from imblearn.under_sampling import TomekLinks
 import datetime
 from sklearn.cluster import KMeans
 from tensorflow.python.client import device_lib

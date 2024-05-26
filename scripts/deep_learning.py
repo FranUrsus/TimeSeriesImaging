@@ -1,14 +1,13 @@
-from keras.models import Sequential
+from tensorflow.keras.models import Sequential
 
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Input, Dropout
 from tensorflow.keras.layers import Rescaling
 from tensorflow.keras.optimizers import Adam
-import keras
+import tensorflow.keras
 import pathlib
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
-import keras_tuner as kt
 
 from sklearn import preprocessing
 
