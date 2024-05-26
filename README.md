@@ -37,7 +37,7 @@ The proposed methodology generates 3 different images from each row of the datas
 
 - The first image (consumption image) (24x24) represents the hourly consumption for each of the 24 days
 
-- The second image (day of year image) (24x24) model the information about the month for each hour of consumption 
+- The second image (day of year image) (24x24) model the information about the day of year for each hour of consumption 
 
 - The third image models the day (day of the week) (24x24) of the week for each consumprion hour
 
