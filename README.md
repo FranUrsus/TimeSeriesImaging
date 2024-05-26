@@ -69,6 +69,15 @@ A custom deep learning architecture will be created from scratch. This backbone 
 
 <img width="863" alt="Captura de pantalla 2024-05-09 a las 20 49 50" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/378d229a-4ab0-400d-84a7-773e82e1788c">
 
+### Error models (24)
+![plot1](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/e3b1f58e-cf49-4f93-8701-6b72cfd4f375)
+
+![plot2](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/7e572eb3-6d52-45af-a500-5a8045651827)
+
+![plot3](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/55b05c15-a284-4a7f-9a6a-f42a1c6b5314)
+
+![plot4](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0bec953b-14c7-4321-9c99-fe1098ea8866)
+
 
 ## Authors ✒️
 
