@@ -27,6 +27,8 @@ The proposed methodology consists of 3 phases:
 
 - Split consumers into train, validation and test.
 
+- Reserve for the test set (on test consumers) days later in time than the days used for training and validation.
+
 
 
 ## Time series imaging
