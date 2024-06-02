@@ -1,8 +1,7 @@
  #  Deep learning and time series imaging for next day electricity consumption forecasts
 
-<img width="1463" alt="Captura de pantalla 2024-06-02 a las 16 35 53" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/75122c63-d9fa-4a7d-ac6d-3884962c7dca">
+ <img width="1461" alt="Captura de pantalla 2024-06-02 a las 16 36 57" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/ee1db344-5346-49c9-8371-905a8e6092d1">
 
- 
 
 <!---**Alternative 2**
 
