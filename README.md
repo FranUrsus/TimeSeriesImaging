@@ -30,6 +30,10 @@ The proposed methodology consists of 3 phases:
 
 - Reserve for the test set (on test consumers) days later in time than the days used for training and validation.
 
+   - For training and validation of users who have fallen into these sets, consecutive consumption data from one year have been used.
+     
+   - For the users of the test set, the consumption of days longer than one year has been used to evaluate the predictive quality of the models with a real future case.
+
 - Each day of the month value is modeled cyclically as follows
   
 <img width="457" alt="Captura de pantalla 2024-05-26 a las 16 30 57" src="https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/a7411a06-3b07-42fa-80d6-12467066c373">
@@ -78,6 +82,18 @@ A custom deep learning architecture will be created from scratch. This backbone 
 ![plot3](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/55b05c15-a284-4a7f-9a6a-f42a1c6b5314)
 
 ![plot4](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/0bec953b-14c7-4321-9c99-fe1098ea8866)
+
+### Model evaluation (Baseline)
+
+To evaluate the quality of the 24 models trained on one year's consumption data, predictions have been made on the test set data with the 24 proposed models and 24 persistent models (predicted value for an hour is the value of that hour for the previous day).
+
+![MAES](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/06176781-6893-4876-8ee9-8f378bbcd4ee)
+![rMAES](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/cab8a2de-c00c-4dc3-9e6b-174bccad81a3)
+![RMSES](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/13c84849-5477-4fce-89ba-495b0409973a)
+![rRMSES](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/01d28fb3-154d-4b83-ae84-31aa0ce25895)
+![R^2](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/9b30a0d7-4829-4845-961a-7bee0a32090c)
+![score](https://github.com/FranUrsus/TimeSeriesImaging/assets/68539118/403397f8-ffec-45d2-a320-04a876143da9)
+
 
 
 ## Authors ✒️
