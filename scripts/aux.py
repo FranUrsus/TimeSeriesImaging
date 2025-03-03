@@ -323,17 +323,37 @@ def plot_centroids(centroids):
                 centroids_id += 1
 
 
+import tensorflow as tf
+
+
 def set_gpu():
-    config = tf.compat.v1.ConfigProto()
-    config.gpu_options.allow_growth = True
-    print(device_lib.list_local_devices())
+    print("\n📌 Verificando dispositivos disponibles...")
     devices = tf.config.list_physical_devices()
-    print("\nDevices: ", devices)
+    print("🔹 Todos los dispositivos:", devices)
+
+    # Intentar listar GPUs
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
-        details = tf.config.experimental.get_device_details(gpus[0])
-        print("GPU details: ", details)
-    tf.config.list_physical_devices()
+        print("\n✅ GPU detectada:", gpus)
+
+        # Habilitar crecimiento dinámico de memoria
+        try:
+            for gpu in gpus:
+                tf.config.experimental.set_memory_growth(gpu, True)
+            print("🚀 GPU configurada correctamente con memory growth activado.")
+        except RuntimeError as e:
+            print("⚠️ Error al configurar GPU:", e)
+
+        # Obtener detalles de la GPU (Metal no muestra mucho aquí)
+        try:
+            details = tf.config.experimental.get_device_details(gpus[0])
+            print("\n🔍 GPU details:", details)
+        except:
+            print("\n⚠️ No se pudo obtener detalles de la GPU.")
+    else:
+        print("\n❌ No se encontró GPU.")
+
+
 
 
 

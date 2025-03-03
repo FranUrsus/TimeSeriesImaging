@@ -4,11 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c073eb0-6d47-4fa0-9620-a376698eef60" name="Changes" comment="" />
+    <list default="true" id="0c073eb0-6d47-4fa0-9620-a376698eef60" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_0_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_10_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_11_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_12_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_13_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_14_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_15_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_16_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_17_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_18_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_19_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_1_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_20_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_21_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_22_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_23_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_2_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_3_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_4_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_5_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_6_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_7_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_8_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cmodel_9_h_general.keras" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_0.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_1.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_10.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_11.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_12.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_13.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_14.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_15.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_16.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_17.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_18.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_19.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_2.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_20.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_21.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_22.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_23.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_3.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_4.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_5.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_6.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_7.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_8.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/history_9.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/aux.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/aux.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/deep_learning.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,21 +86,25 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/fran/Documents/Developer/python/TimeSeriesImaging/TimeSeriesImaging&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/fran/Developer/TimeSeriesImaging&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/logs" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/models" />
     </key>
   </component>
@@ -86,6 +150,35 @@
       <workItem from="1716447884902" duration="31490000" />
       <workItem from="1716660085824" duration="601000" />
       <workItem from="1716714321237" duration="18716000" />
+      <workItem from="1740153930990" duration="5632000" />
+      <workItem from="1740180701410" duration="17719000" />
+      <workItem from="1740249970414" duration="56000" />
+      <workItem from="1740309489169" duration="13014000" />
+      <workItem from="1740323381310" duration="2216000" />
+      <workItem from="1740344882419" duration="2222000" />
+      <workItem from="1740416097439" duration="14744000" />
+      <workItem from="1740657035500" duration="9091000" />
+      <workItem from="1740669227528" duration="9357000" />
+      <workItem from="1740679100229" duration="8347000" />
+      <workItem from="1740687551706" duration="1581000" />
+      <workItem from="1740728769760" duration="13597000" />
+      <workItem from="1740742397392" duration="2197000" />
+      <workItem from="1740753413712" duration="7010000" />
+      <workItem from="1740760657418" duration="7175000" />
+      <workItem from="1740767987356" duration="5665000" />
+      <workItem from="1740818130399" duration="5578000" />
+      <workItem from="1740823971703" duration="4394000" />
+      <workItem from="1740828386489" duration="8018000" />
+      <workItem from="1740836672521" duration="4770000" />
+      <workItem from="1740844878906" duration="12270000" />
+      <workItem from="1740857787356" duration="2538000" />
+      <workItem from="1740907516631" duration="9661000" />
+      <workItem from="1740917215389" duration="12332000" />
+      <workItem from="1740934096557" duration="635000" />
+      <workItem from="1740935193031" duration="4772000" />
+      <workItem from="1740939982082" duration="6324000" />
+      <workItem from="1740946328850" duration="5559000" />
+      <workItem from="1740987936522" duration="2474000" />
     </task>
     <servers />
   </component>
