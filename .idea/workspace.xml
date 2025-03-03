@@ -6,56 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c073eb0-6d47-4fa0-9620-a376698eef60" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_0_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_10_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_11_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_12_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_13_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_14_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_15_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_16_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_17_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_18_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_19_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_1_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_20_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_21_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_22_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_23_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_2_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_3_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_4_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_5_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_6_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_7_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_8_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cmodel_9_h_general.keras" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_0.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_1.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_10.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_11.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_12.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_13.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_14.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_15.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_16.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_17.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_18.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_19.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_2.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_20.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_21.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_22.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_23.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_3.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_4.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_5.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_6.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_7.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_8.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/history_9.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/aux.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/aux.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/deep_learning.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/cnn_mejorado_model.h5" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +129,7 @@
       <workItem from="1740935193031" duration="4772000" />
       <workItem from="1740939982082" duration="6324000" />
       <workItem from="1740946328850" duration="5559000" />
-      <workItem from="1740987936522" duration="2474000" />
+      <workItem from="1740987936522" duration="11701000" />
     </task>
     <servers />
   </component>
